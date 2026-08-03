@@ -1,11 +1,15 @@
 \documentclass[11pt,a4paper]{article}
 
-\usepackage[T1]{fontenc}
+\usepackage[LGR,T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[greek.ancient,spanish]{babel}
 \usepackage[a4paper,margin=2.8cm]{geometry}
 \usepackage{microtype}
 \usepackage[hidelinks]{hyperref}
+
+% Griego politónico escrito directamente en UTF-8:
+% \gr{...} para palabras sueltas; bloques con \foreignlanguage{greek}{...}
+\newcommand{\gr}[1]{\foreignlanguage{greek}{#1}}
 
 \hypersetup{
   pdftitle={Leer la Odisea en tiempos iletrados}
@@ -23,6 +27,8 @@
 
 \maketitle
 
+\section{El cine teme a Homero}
+
 Para mi decimoquinto cumpleaños mi padre me había prometido un «regalo que te va a gustar» y yo sospechaba que sería un libro, porque los regalos de mi padre siempre eran libros.
 
 En lo que se refiere a esos extraños animales, parecidos a ladrillos, con tapas de pasta y cuerpo de papel, yo era un depredador voraz y omnívoro. Devoraba todo lo que caía en mis manos y lo hacía sin contemplaciones, a toda velocidad. Mi capacidad lectora tenía un origen muy claro. Ser hijo de marino y cambiar de ciudad cada pocos años me había condenado a una soledad que mi familia numerosa no acababa de mitigar: al ser el mayor, estaba un poco por delante en edad de las dos chicas que me seguían y a años luz, en la escala de la infancia, de los otros tres chicos. Con pocos amigos y sin móviles, las opciones eran muy reducidas. Mi padre resolvió la situación cuando empezó a comprarme todos los domingos un tebeo (las aventuras del \emph{Capitán Trueno}) y un libro de la maravillosa colección «Historias Selección». De ahí pasé a Emilio Salgari, Julio Verne y Mark Twain, sin despreciar las novelas de vaqueros de Marcial Lafuente Estefanía y las novelitas de ciencia ficción que escribían autores como Joe Mogar, a quienes yo suponía gringos y que resultaron ser tan españoles como yo.\footnote{\url{https://www.jotdown.es/2011/11/juan-jose-gomez-cadenas-cuando-se-detengan-las-estrellas/}}
@@ -31,7 +37,7 @@ A los quince años campeaba por la biblioteca de mi padre ---aquellas biblioteca
 
 El regalo llegó justo a tiempo para llevarme el enorme volumen a la playa. Me faltó tiempo para mostrárselo a Pedro y los dos pasamos un buen rato admirándolo como quien venera una Biblia, maravillándonos con aquel guerrero griego, lanza en mano, que ocupaba la portada, acariciando el lomo azul, leyendo el título con la solemnidad de quien sabe que, a partir del momento en que nos sumergiéramos en las páginas sagradas, dejaríamos de ser niños para convertirnos en adultos. Peor aún, en poetas.
 
-El libro era la maravillosa versión de la \emph{Ilíada} y la \emph{Odisea} que el Círculo publicó en 1971. La traducción ---¡de 1910, nada menos!--- era de Luis Segalá y Estalella, pero ese dato, entonces, se me pasó por alto. Sabía, naturalmente, que el original era un texto griego, pero estaba mucho más interesado en la leyenda del bardo ciego, el Poeta en mayúsculas, que en detalles menores como el hecho de que la versión de Segalá estuviera en prosa, mientras que Homero había escrito en hexámetros dactílicos. Algunos años más tarde leí la \emph{Eneida}, a lo largo de un verano en el que tampoco faltaron playas mediterráneas. Para mi fortuna, no la leí solo ni en voz baja, sino declamando los versos libres con que Javier de Echave había traducido a Virgilio. Mi acompañante, cuya memoria no han borrado cuatro décadas de ausencia, me explicó que el gran poeta latino había usado la misma métrica que Homero y que aquellos hexámetros dactílicos, ¡ay!, eran esencialmente intraducibles al castellano. Pero la versión que leíamos frente al mismo mar que habían surcado Odiseo y Eneas parecía conservar toda la poesía del original.
+El libro era la maravillosa versión de la \emph{Ilíada} y la \emph{Odisea} que el Círculo publicó en 1971. La traducción ---¡de 1910, nada menos!--- era de Luis Segalá y Estalella, pero ese dato, entonces, se me pasó por alto. Sabía, naturalmente, que el original era un texto griego, pero estaba mucho más interesado en la leyenda del bardo ciego, el Poeta en mayúsculas, que en detalles menores como el hecho de que la versión de Segalá estuviera en prosa, mientras que Homero había escrito en hexámetros dactílicos. Algunos años más tarde leí la \emph{Eneida}, a lo largo de un verano en el que tampoco faltaron playas mediterráneas. Para mi fortuna, no la leí solo ni en voz baja, sino declamando los versos libres con que Javier de Echave-Sustaeta había traducido a Virgilio. Mi acompañante, cuya memoria no han borrado cuatro décadas de ausencia, me explicó que el gran poeta latino había usado la misma métrica que Homero y que aquellos hexámetros dactílicos, ¡ay!, eran esencialmente intraducibles al castellano. Pero la versión que leíamos frente al mismo mar que habían surcado Odiseo y Eneas parecía conservar toda la poesía del original.
 
 \begin{verse}
 Y ahora canto las armas horrendas del dios Marte\\
@@ -39,30 +45,84 @@ y al héroe que forzado al destierro por el hado\\
 fue el primero que desde la ribera de Troya arribó a Italia.
 \end{verse}
 
-Imagina, querida lectora, amigo lector, ese Mediterráneo del color del vino y declama, mejor aún, grita los versos. Haz que resuenen en la habitación en la que te encuentras, sal al balcón como Antonio y canta a las armas, a los héroes y a los interminables viajes. ¿Sientes la emoción? Bienvenida, bienvenido, al desesperado reino de la poesía.
+Imagina, querida lectora, amigo lector, ese Mediterráneo del color del vino y declama, mejor aún, grita los versos. Haz que resuenen en la habitación en la que te encuentras, sal al balcón como Antonio en Alejandría y canta a las armas, a los héroes y a los interminables viajes. ¿Sientes la emoción? Bienvenida, bienvenido, al desesperado reino de la poesía.
 
 La versión de Segalá era en prosa y no una prosa para pusilánimes. El primer canto arrancaba así:
 
 \begin{quote}
 \small
-Háblame, Musa, de aquel varón de multiforme ingenio que, después de destruir la sacra ciudad de Troya, anduvo peregrinando larguísimo tiempo, vió las poblaciones y conoció las costumbres de muchos hombres y padeció en su ánimo gran número de trabajos en su navegación por el ponto, en cuanto procuraba salvar su vida y la vuelta de sus compañeros á la patria. Mas ni aun así pudo librarlos, como deseaba, y todos perecieron por sus propias locuras. ¡Insensatos! Comiéronse las vacas del Sol, hijo de Hiperión; el cual no permitió que les llegara el día del regreso. ¡Oh diosa, hija de Júpiter!: cuéntanos aunque no sea más que una parte de tales cosas.
+Háblame, Musa, de aquel varón de multiforme ingenio que, después de destruir la sacra ciudad de Troya, anduvo peregrinando larguísimo tiempo, vio las poblaciones y conoció las costumbres de muchos hombres y padeció en su ánimo gran número de trabajos en su navegación por el ponto, en cuanto procuraba salvar su vida y la vuelta de sus compañeros a la patria. Mas ni aun así pudo librarlos, como deseaba, y todos perecieron por sus propias locuras. ¡Insensatos! Comiéronse las vacas del Sol, hijo de Hiperión; el cual no permitió que les llegara el día del regreso. ¡Oh diosa, hija de Júpiter!: cuéntanos aunque no sea más que una parte de tales cosas.
 \end{quote}
 
-Si se lee el primer párrafo de un tirón, el riesgo de sofoco es grande. El texto sonaba grandilocuente y lo era, pero también emocionante y exótico. <<Insensatos>>, le gritaba a mi primo, <<comiéronse las vacas del Sol, hijo de Hiperión>>. Y él respondía en el mismo tono, <<¡Oh diosa, hija de Júpiter!: cuéntanos aunque no sea más que una parte de tales cosas>>, y los dos nos sentíamos bardos y guerreros y amigos de los olímpicos. 
+Si se lee el párrafo de un tirón, el riesgo de sofoco es grande. El texto sonaba grandilocuente y lo era, pero también emocionante y exótico. «Insensatos», le gritaba a mi primo, «comiéronse las vacas del Sol, hijo de Hiperión». Y él respondía en el mismo tono, «¡Oh diosa, hija de Júpiter!: cuéntanos aunque no sea más que una parte de tales cosas», y los dos nos sentíamos bardos y guerreros y amigos de los olímpicos.
 
- %tragaderas de mis quince años eran tan espaciosas como las cóncavas naves. En aquella primera lectura, solo me interesaban la historia, las aventuras del héroe, los encuentros con el cíclope y los lestrigones, el paso entre Escila y Caribdis, la música de las sirenas que todavía resuena en mis oídos. 
- 
- 
- Por uno de aquellos caprichos de los dioses, aquel verano pasaron en el cine la película protagonizada por Kirk Douglas, que dejó de ser Kirk Douglas para siempre y se convirtió en Ulises. Pero el cinemascope no podía competir con nuestra imaginación y la mecha que la había incendiado era el texto escrito. Y una vez que la imaginación escapa, como los vientos de la bolsa de Eolo, ya no hay quien le ponga rienda. Pedro y yo nos pasamos el resto del mes de agosto navegando por el Mar Menor en el balandro diminuto que mi padre y mis tíos habían comprado para la primada. Juro que las sirenas habitaban entonces en la isla del Barón, que Nausica se bañaba desnuda en la Perdiguera ---aunque quizás su segundo nombre era Ingrid o Helga---, que los casinos de La Manga hervían de lestrigones y que un día, creyendo a su dueño en tierra, abordamos un yate fondeado cerca del club náutico que resultó ser propiedad de un cíclope que salió de la sentina y del que escapamos milagrosamente, no sin recibir antes alguna bofetada.
+Por uno de aquellos caprichos de los dioses, aquel verano pasaron en el cine la película protagonizada por Kirk Douglas, que dejó de ser Kirk Douglas para siempre y se convirtió en Ulises. Pero el cinemascope no podía competir con nuestra imaginación y la mecha que la había incendiado era el texto escrito. Y una vez que la imaginación escapa, como los vientos de la bolsa de Eolo, ya no hay quien le ponga rienda. Pedro y yo nos pasamos el resto del mes de agosto navegando por el Mar Menor en el balandro diminuto que mi padre y mis tíos habían comprado para la primada. Juro que las sirenas habitaban entonces en la isla del Barón, que Nausícaa se bañaba desnuda en la Perdiguera ---aunque quizás su segundo nombre era Ingrid o Helga---, que los casinos de La Manga hervían de lestrigones y que un día, creyendo a su dueño en tierra, abordamos un yate fondeado cerca del club náutico que resultó ser propiedad de un cíclope que salió de la sentina y del que escapamos milagrosamente, no sin recibir antes alguna bofetada.
 
 Todo hay que decirlo, la lectura de la \emph{Odisea} me dejó varias cuentas pendientes con Ulises. Nunca le perdoné la crueldad con que masacró a los pretendientes y ejecutó a las esclavas. Tampoco tenía yo tan claro que hubiera sufrido tanto con Calipso o con Circe, de la que, por cierto, me enamoré como un cencerro. Medio siglo más tarde, zanjaría esas cuentas con el héroe (y con la bruja), imaginándolo viejo y consumido por los remordimientos en una Ítaca que ya no era su hogar, pero todavía enamorado y no precisamente de Penélope\footnote{\url{https://eolasediciones.es/libro/abandonando-itaca-leaving-ithaca/}}.
 
-Lo que me lleva al dilema que todo marino debe resolver cuando navega por las procelosas aguas de Homero (o de Virgilio) y tiene que negociar el paso entre la Escila de la fidelidad al texto original y la Caribdis de conseguir que ese texto sea comprensible para sus contemporáneos. 
+Lo que me lleva al dilema que todo marino debe resolver cuando navega por las procelosas aguas de Homero (o de Virgilio) y tiene que negociar el paso entre la Escila de la fidelidad al texto original y la Caribdis de conseguir que ese texto sea comprensible, mejor aún, \emph{aceptable} para sus contemporáneos.
 
-Un ejemplo que sufrí en mis propias carnes. En la Iliada, que también leí aquel verano, Héctor de Troya, el más noble e insensato de todos los héroes de la literatura ---¿qué falta le hacía enfrentarse a Aquiles, a quién no podía derrotar?--- huye, cuando este se le echa encima y ambos dan tres vueltas corriendo a las murallas de Troya, antes de que se decida a plantarle cara. ¿Pero en qué quedamos?, me preguntaba yo. ¿Cómo era posible que al valeroso general, después de tomar la decisión de enfrentar al semidiós ---por honor, obviamente--- le entrara el canguelo y saliera por piernas? Muchos años más tarde, leería en un ensayo que la idea de cobardía de aquellos guerreros de la edad del bronce era muy diferente de la nuestra. Para ellos no había menoscabo alguno en abrazar las rodillas del enemigo y suplicar por su vida, o en darse unas carreras mientras se calmaban los nervios. Ahora bien, ¿algún director de cine contemporáneo se atrevería a filmar esa escena? 
+Un ejemplo que todavía hoy me hace sufrir. En la \emph{Ilíada}, que también leí aquel verano, Héctor de Troya, el más noble e insensato de todos los héroes de la literatura huye cuando Aquiles se le echa encima y ambos dan tres vueltas corriendo en torno a las murallas de Troya, antes de que se decida a plantarle cara. Cuando leí aquella escena no daba crédito a mis ojos. ¿Cómo era posible, me preguntaba, que al valeroso general, después de tomar la decisión de enfrentar al semidiós ---por honor, obviamente--- le entrara el canguelo y saliera por piernas? Llegué incluso a escribir una variante de la historia en la que Héctor no tenía miedo sino que intentaba agotar a Aquiles haciéndole correr, aparentemente sin darse cuenta de que se las estaba viendo con «el de los pies ligeros». Me costó bastantes años y muchas lecturas reconciliarme con el hecho de que Héctor, por noble que fuera, era humano y por tanto podía sentir miedo, como sentiría cualquiera frente a un enemigo invencible y furioso. Y cuando finalmente caí en la cuenta de la humanidad del héroe cuyo nombre lleva mi hijo, me di cuenta también de que Homero me lo había dejado claro desde el principio. El poeta se limita a describir la huida con una compasión enorme, utilizando el símil de la pesadilla, en que ni el perseguidor consigue alcanzar a su presa ni el perseguido escapar del que le acosa. Ni juzga a Aquiles por su saña, ni a Héctor por su miedo. 
 
-Este año la \emph{Odisea} está de nuevo de moda, gracias a la película de Nolan, que a su vez se ha <<inspirado>> . En estos casos uno no sabe si agradecerle al popular director que haya acercado al héroe a tanta gente o lamentar las ---¿inevitables?--- simplificaciones, omisiones, clichés y pastiches. Pero el propósito de este artículo no es hablar de Nolan, ya ha corrido bastante tinta sobre la película y me resisto a tomarme en serio una historia en la que el cíclope no hace otra cosa que zamparse aqueos ---una escena que omite, ¡oh, sacrilegio!, el momento clave en que Odiseo le dice a Polifemo que su nombre es Nadie---, la maravillosa princesa Nausícaa no aparece y el héroe se tira siete años fumando loto donde Calipso.
+¿Cómo se traslada eso a la narrativa contemporánea? Si escogemos el cine, como medio de comunicación de masas, no faltan versiones de la \emph{Ilíada}. En ninguna, que yo sepa ---desde luego no en la «clásica» \emph{Troya} de Petersen (2004), en la que Eric Bana le planta cara virilmente a Brad Pitt--- aparece la escena de la huida y, en consecuencia, el personaje de Héctor se aleja del original y no para bien. El héroe de Petersen es mucho más cliché que el de Homero (de Aquiles, mejor ni hablamos) y ese cliché se transmite a millones de espectadores. 
 
-Hablemos de otra \emph{Odisea} que ha aparecido en 2026, una mucho más interesante.
+Puede alegarse, con razón, que el cine es traducción intersemiótica y, por tanto, en última instancia, interpretación. Es decir, \emph{traduttore, traditore}. Pero ni todas las traducciones son equivalentes, ni todas las traiciones igual de imperdonables. 
+	
+En una de las escenas más conseguidas de la \emph{Odisea} de Nolan, el rapero Travis Scott interpreta a un bardo que canta la caída de Troya, acompañándose de un bastón con el que golpea rítmicamente el suelo. Hay un elemento a la vez onírico y familiar en ese híbrido entre rap e invocación épica, una conexión intensa entre el rapero negro y el bardo griego que encarna. Nolan no pretende que Travis traduzca (literalmente) a ese bardo. Pretende que lo interprete, que lo devuelva a la vida, que nos haga sentir con su rap lo que sentirían los aqueos escuchando a un poeta itinerante hace tres milenios. Y creo que, en buena medida, lo consigue. 
 
+Interpretar la \emph{Odisea} en clave cinematográfica requiere no poca osadía, más aún teniendo en cuenta que muchos otros cineastas lo han intentado antes. Y quizás ese sea mi mayor problema con la versión de Nolan. A pesar de su bardo rapero, a pesar de la habilidad con que quita de en medio a los dioses ---excepto a una onírica Atenea---, a pesar de elipsis muy inteligentes, como la que nos permite escuchar, pero no ver, a las sirenas, o de opciones arriesgadas y elegantes como escoger a Lupita Nyong'o para interpretar a Helena ---si Homero hubiera coincidido con la actriz, quizás nos habría legado «Helena la de los brazos de ébano» en lugar de «Helena la de blancos brazos»---, a la película, creo, le pasa lo mismo que a Héctor. Tiene miedo, en este caso no a Aquiles, sino al mismísimo Homero.
+
+Los ejemplos abundan, empezando por la misma Helena, que en la película tiene el rostro marcado por una cicatriz que le infligió el vengativo Menelao, con toda la carga de violencia machista que ello implica. Pero se da la circunstancia de que el texto de la \emph{Odisea} \emph{contradice} esa lectura. En el poema, cuando Telémaco llega a Esparta encuentra a Helena radiante y a sus anchas. Otros textos clásicos, de hecho, explican que toda la furia asesina de Menelao se disuelve cuando su mujer adúltera le muestra el pecho invitándole a matarla. Lejos de hacerlo, tira la espada y la lleva de vuelta a casa.
+
+Ojo, no es que Homero sea feminista, pacifista o especialmente compasivo. De hecho, cuando se pone, es un energúmeno.
+En el canto XXII de la \emph{Odisea}, Homero nos describe un episodio repugnante, que Nolan se salta a la torera, con la misma cintura con que Petersen se salta la huida de Héctor: acabada la matanza de los pretendientes, las doce esclavas que se habían acostado con ellos son obligadas a limpiar la sangre y luego ahorcadas por Telémaco, que demuestra con semejante salvajada que tampoco es la hermanita de la caridad que dibuja Nolan en su adaptación. Es decir, Homero no tiene problema alguno en castigar con saña a unas pobres criadas por una falta muchísimo menor que la de Helena. Leer a Homero nos dice que al poeta ---y por extensión, a la gente de su tiempo--- le parecía muy bien que la reina adúltera se fuera de rositas y las esclavas acabaran en la picota.
+
+Todavía hay más. La Helena de Homero no necesita que la castiguen. Ella misma se castiga, se maldice, se llama a sí misma \gr{κυνῶπις} (\emph{kynôpis}, cara de perra, desvergonzada). Helena escapa al castigo físico y a la violencia machista por ser noble y bellísima, a diferencia de las infelices esclavas. La única cicatriz que lleva es la del remordimiento. Nolan simplifica todo eso propinándole un tajo en el rostro.
+
+Está en su derecho, claro, y lo digo por experiencia. En mi propia versión del mito de Odiseo, reinterpreto esencialmente toda la vida y la personalidad del héroe. Reescribir al clásico no solo es necesario, es, hasta cierto punto, inevitable. Pero hay que decir que el jaleado director se complica poco la vida: el navajazo en el rostro de la bella es un cliché tan trillado como el fornido Eric Bana plantándole cara sin miedo al no menos fornido Brad Pitt. Y resulta irónico que un texto del siglo VIII a.C. ofrezca una lectura inquietante y subversiva de Helena de Troya ---una belleza amoral que sobrevive a la catástrofe que causó--- mientras que Nolan ofrece algo mucho más convencional y comercial a la vez, la víctima cuya cicatriz reconocemos y con la que podemos identificarnos. Exactamente igual que hace Petersen. ¿Para qué arriesgarse a que los espectadores crean que Héctor es un cobarde, si podemos suprimir la carrera? 
+
+El segundo ejemplo es todavía más grave. En la versión de Nolan, el cíclope es un idiota casi mudo, un personaje mucho menos interesante que el gamberro y malvado Polifemo y la escena correspondiente es pura acción, sin apenas diálogo. En la \emph{Odisea}, en cambio, Polifemo es \emph{casi} tan artero como Ulises y empieza fingiendo hospitalidad:
+
+\begin{verse}
+\foreignlanguage{greek}{καί μοι τεὸν οὔνομα εἰπὲ αὐτίκα νῦν, ἵνα τοι δῶ\\
+ξείνιον, ᾧ κε σὺ χαίρῃς·}
+\end{verse}
+
+\begin{verse}
+Y dime tu nombre ahora mismo, para que te dé un regalo de huésped con el que te alegres.\footnote{La palabra que usa es \gr{ξείνιον} (\emph{xeínion}), un término que denota específicamente el presente debido al huésped.}
+\end{verse}
+
+El regalo en cuestión no es otro que zamparse a Odiseo el último. Pero Ulises tiene su propio as en la manga y contesta.
+
+\begin{verse}
+\foreignlanguage{greek}{Οὖτις ἐμοί γ' ὄνομα· Οὖτιν δέ με κικλήσκουσι\\
+μήτηρ ἠδὲ πατὴρ ἠδ' ἄλλοι πάντες ἑταῖροι.}
+\end{verse}
+
+\begin{verse}
+Nadie es mi nombre; Nadie me llaman mi madre y mi padre y todos los demás compañeros.
+\end{verse}
+
+Así que, después de que los aqueos lo cieguen, cuando Polifemo pide ayuda a los demás cíclopes y estos le preguntan quién le ataca, contesta:
+
+\begin{verse}
+\gr{ὦ φίλοι, Οὖτίς με κτείνει δόλῳ οὐδὲ βίηφιν.}
+\end{verse}
+
+\begin{verse}
+¡Amigos!, Nadie me mata con engaño y no con fuerza.
+\end{verse}
+
+El problema de la lectura de Nolan, en mi opinión, es triple. Primero, transforma un personaje inteligente y cabal en un imbécil y, al hacerlo, niega el hecho de que Polifemo es un anfitrión fallido, casi podríamos decir que el arquetipo del anfitrión fallido, precisamente uno de los ejes temáticos que guían la película. Segundo, al esquivar el engaño de Ulises, pierde la oportunidad de mostrar la característica más sobresaliente del héroe ---la astucia--- en su momento más brillante. Tercero, vuelve a sustituir la sofisticación de Homero por un cliché. En el poema, «Nadie me mata con engaño y no con fuerza», mientras que en el film, Odiseo le dispara una flecha al Cíclope, esencialmente sustituyendo el engaño ---necesario para salvarse--- por la fuerza ---gratuita además, ya que están a salvo---. En otras palabras, Nolan convierte a \gr{πολύτροπος} (\emph{politropos}), el hombre de los mil recursos, en un héroe de acción tan cliché como su Helena. De hecho, Nolan parece empeñado en dejar cojo a Ulises. Le hace avisar a sus potenciales víctimas, con una nota de su arco, de que se dispone a cazarlas ---algo que el astuto y retorcido Odiseo no haría ni borracho--- y justifica los siete años que se pasa con Calipso en términos de estrés postraumático por la guerra de Troya. Este último punto es un giro interesante de la personalidad del héroe que, sin embargo, desgraciadamente, acaba por ser dominante. 
+
+Podríamos seguir con otros muchos detalles. Los lestrigones son idénticos a los modelos viejos de los cylons en \emph{Battlestar Galactica}. Telémaco es un boy-scout ---no olvidemos que en la \emph{Odisea} es él quien ahorca a las criadas---. Circe, la de las largas trenzas, tiene algo de tabernera y Calipso, de traficante de drogas. Podría alegarse, sin embargo, que para gustos, los colores y también, sin mentir, que el conjunto es entretenido y bellamente filmado. 
+
+Pero lo cierto es que una cosa es reinterpretar y otra simplificar. Nolan, supuestamente, quiere reflexionar sobre el fin de la ley de Zeus, la \gr{ξενία} (\emph{xenía}), pero se salta dos ejemplos cruciales que Homero nos ofrece vívidamente. Ignora cómo Polifemo ---nada menos que el hijo de un dios--- se pasa la \emph{xenía} por el forro y no se molesta en hablarnos de un personaje central, Nausícaa, ni de su gente, los feacios, a pesar de que estos se caracterizan, precisamente, por respetarla a elevado coste (Poseidón luego se venga de ellos por ayudar a Odiseo). En ambos casos, la película se pega un tiro en el pie (en los dos pies, podríamos decir). 
+
+El problema es que, en los tiempos que corren, cuando el número de lectoras cada día se reduce más y el de lectores tiende a cero, uno se arriesga a que la \emph{Odisea} de Nolan o la \emph{Troya} de Petersen se conviertan en el Canon. Y eso sería grave, porque, o mucho me equivoco, o el cine le tiene miedo a Homero. 
+
+Aun así, parafraseando a Borges, hay algo que se queda. Se queda parte de la historia, una sombra de los personajes, una evocación más o menos afortunada de un tiempo y lugar. Pero también hay algo que se queja. Y esa queja es casi inabarcable. Lo sé, porque recuerdo al niño que se enamoró de Circe, de Dido, de Nausícaa. Lo sé porque recuerdo la felicidad de leer a Homero y a Virgilio frente al vinoso Ponto, lo sé porque, afortunadamente, medio siglo después de mi primer encuentro con Homero, vuelvo a emocionarme hasta las lágrimas con la lectura de una nueva traducción de la \emph{Odisea} al castellano, debida a la pluma audaz de Juan Manuel Rodríguez Tobal.
+
+
+\section{Tobal o la Osada Odisea}
 \end{document}
