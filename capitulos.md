@@ -7,6 +7,8 @@ Libro en construcción. Cada capítulo se publica también como artículo (Jot D
 - La memoria personal y familiar del autor como hilo conductor (el padre, el primo Pedro, el hijo Héctor, la hija Irene).
 - Tono: erudición filológica + ironía coloquial deliberada (los giros coloquiales son intencionados, no descuidos).
 
+**Propósito central del libro (motor narrativo):** humanizar a Ulises más allá de Homero. El anciano Ulises de *Abandonando Ítaca* deja de creer en los dioses; sin dioses no hay destino, y sin destino no hay coartada: sus crímenes fueron suyos. El Ulises de Homero *atribuye*; el del autor *asume* — y al final se le abre una posible redención. La crítica a Nolan es, en el fondo, una excusa narrativa más, no el asunto del libro.
+
 ---
 
 ## Capítulo 1 — El cine teme a Homero (`odisea.tex`)
@@ -112,11 +114,38 @@ Libro en construcción. Cada capítulo se publica también como artículo (Jot D
 
 ---
 
+## Capítulo 5 — Nausícaa (`odisea5_nausicaa.tex`)
+
+**Estado:** terminado; .docx preparado.
+
+**Marco personal:** el lector de quince años enamorado de la princesa de su misma edad (hamaca del Mar Menor, celos de los pretendientes, ganas de teletransportarse a Corfú); y el padre actual, con la nostalgia de las carantoñas de Irene antes de pedir «las llaves del coche». Motivo nuevo: los «misterios de la relatividad general» — leer a Tobal medio siglo antes de que la escribiera; Einstein y Homero.
+
+**Recorrido (canto VI con Tobal):** la alcoba «milbienlabrada» (contraste con Segalá); el enredo de Atenea en el sueño; el «papá» (πάππα, único en toda la *Odisea*) — **defensa del «dad» de Nolan** frente a sus críticos; el lavadero y la pelota; el símil de Ártemis; el náufrago desnudo como león (y «casi en cuero picado»); la súplica a distancia del héroe convertido en pordiosero; la hospitalidad y el aplomo de Nausícaa; el cotilleo feacio («y eso que todavía no se habían inventado las redes sociales»); la plegaria final y Atenea que no acude por miedo al tío Poseidón.
+
+**Crítica a Nolan:** suprimir a Nausícaa y los feacios es «pecado capital»: borra el contraejemplo de su propia tesis sobre la *xenía*.
+
+**Injerto de *Abandonando Ítaca*:** tres fragmentos (la princesa desnuda y el mendigo; «¿La amabas?»; «¿convicción o cobardía?»).
+
+**Cierre:** el amor imposible por partida doble (lo pierde el héroe y lo pierde el adolescente lector); el «dulce y lacerante filtro» (eco del nepenthes de Helena); «Todos seguimos amando a Nausícaa».
+
+---
+
+## Capítulo 6 — Esqueria (`odisea6_esqueria.tex`)
+
+**Estado:** terminado; .docx preparado. **Primera pieza con secciones** (`\section*`), para alcanzar el tamaño JD: «El palacio de Alcínoo» (canto VII) y «Bardos» (canto VIII y arranque del IX). En el libro podrían ser capítulos separados.
+
+**El palacio de Alcínoo:** Atenea celestina y la niebla; la ciudad de los navicélebres feacios — Esqueria como **paraíso perdido**; el palacio fabuloso (Ítaca y Esparta, «chozas cabreras»); la súplica a Arete: el saqueador reducido a mendigo «descubre ---¿o finge?--- la humildad» y se vuelve algo más humano; «Y Nolan la elimina de su historia» (párrafo de una línea); Equeneo y el huésped en las cenizas; la justificación formal de la *xenía* (los dioses comen a su mesa); el «impúdico estómago» y el «pobre infeliz»; la agudeza de Arete (las ropas); Alcínoo ofrece a su hija al vuelo; las naves mágicas sin timonel y la profecía de Poseidón (la recompensa por cumplir la *xenía* será el aislamiento eterno); cierre con el eco de Esparta: Alcínoo y Arete se encaman como Helena y Menelao.
+
+**Bardos:** Demódoco (el papel que Travis Scott habría bordado); el canto del caballo; el llanto oculto de Odiseo con el símil de la cautiva (Homero le da al héroe las lágrimas de sus víctimas); el «dime tu nombre» tras un día entero de anonimato; «Soy Odiseo Laertiada». Salto a *Abandonando Ítaca*: la memoria del anciano que falla; el juramento de los pretendientes de Helena (del *Catálogo de las mujeres* atribuido a Hesíodo, s. VI a.C.); la codicia como verdadero motor de la guerra; el diálogo paródico Matt Damon/Penélope («rumbo al sol poniente»); los cícones en Homero (saqueo confesado «como quien dice que fue a buscar tabaco») y en el poema («un matón cruel y astuto que tuvo más suerte que los demás»). **Cierre en verso, deliberado:** «los hombres inventaron a los inmortales / para dar un sentido a sus propios errores» — el ateísmo del anciano le quita la coartada del pasado (núcleo del motor narrativo del libro).
+
+**Función en el libro:** primera pieza plenamente al servicio del motor narrativo (Homero atribuye, el autor asume); deja enhebrados los relatos de los cantos IX–XII (Polifemo, Circe, Hades, sirenas) como «lo que contó a continuación».
+
+---
+
 ## Hilos pendientes del libro
 
-1. Capítulo Ifigenia/Clitemnestra: el sacrificio, Ulises rastrero, Egisto, Orestes (ojo: Nolan mete Esquilo —*Orestíada*— por Homero). Borrador iniciado: `ifigenia.tex`.
-2. Capítulo de Circe (anunciado en el cap. 4). Borrador iniciado: `odisea4_circe.tex`.
-3. Capítulo del cíclope: Οὖτις en detalle, el silencio de Nolan (Ulises no habla con Polifemo).
-4. El Hades (canto XI, anunciado en el cap. 3).
+1. Los relatos (cantos IX–XII), enhebrados desde el cierre del cap. 6: Polifemo/Οὖτις (el silencio de Nolan: Ulises no habla con el cíclope), Circe (borrador: `odisea4_circe.tex`), el Hades (anunciado en los caps. 3 y 6), las sirenas.
+2. Capítulo Ifigenia/Clitemnestra: el sacrificio, Ulises rastrero, Egisto, Orestes (ojo: Nolan mete Esquilo —*Orestíada*— por Homero). Borrador iniciado: `ifigenia.tex`.
+3. El destino de los feacios (la profecía de Poseidón citada en el cap. 6 se cumple en el canto XIII).
 4. Posible recuperación del material de Emily Wilson (comentado en `odisea2.tex`).
 5. Decisiones de libro: numeración/títulos de capítulos, unificar las referencias cruzadas («como vimos en…») cuando se ensamble el volumen.
