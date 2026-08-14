@@ -142,10 +142,34 @@ Libro en construcción. Cada capítulo se publica también como artículo (Jot D
 
 ---
 
+## Capítulo 7 — Cíclope (`odisea7_ciclope.tex`)
+
+**Estado:** terminado; .docx en el repo.
+
+**Tesis:** el episodio de Polifemo es el laboratorio del narrador no fiable: la más célebre astucia de Odiseo es también su mentira mejor contada, y la fama del héroe se funda en agrandar al monstruo.
+
+**Recorrido:** tregua inicial con Nolan (lo que salva: Esparta, Nyong'o, Bernthal; lo que condena: eliminar el architruco — «séptimo círculo del infierno» con Michael Bay, Emmerich y Santiago Segura). Lotófagos vía poema propio (la belleza como peligro; «Tal vez nunca creíste en dioses» — siembra del ateísmo del anciano). Los cíclopes «altivos sin ley» que viven de los dioses; la isla de las cabras; la avaricia como motivo real del desembarco (el vino de Marón como plan premeditado). Paralelismo Calipso/Polifemo (ambos en cuevas = seres sobrenaturales, no rudos); nota: Homero nunca dice que tenga un solo ojo (eso es Hesíodo, *Teogonía*) — detalle clave para el poema propio (cataratas). La cueva del tesoro y la imprudencia arrogante. La *xenía* invertida: comparación fórmula ritual de Néstor («huéspedes», tras dar de comer) vs. el cíclope («extraños», antes) — Tobal traduciendo ὦ ξεῖνοι de dos maneras. **Tesis anti-Nolan central:** en la *Odisea* la *xenía* se respeta casi siempre (Néstor, Menelao, Calipso, feacios); sus dos violaciones racionales son los pretendientes y Polifemo — justo lo que la película ignora. Duelo de arteros (pregunta por las naves / mentira del naufragio); Οὖτις; la borrachera; la estaca (Flaubert); «Con artería y no a fuerza Ninguno, queridos, me mata»; la bravuconada final que deshace la treta (dos necios). Narrador no fiable: el cíclope demasiado listo y demasiado tonto, demasiado malo (come hombres) y demasiado bueno (mima ovejas). Poema: los nietos pidiendo el cuento, la verdad disuelta «como la sal en el agua», los cíclopes como hijos rechazados del Olimpo, «ese pobre y gentil muchacho algo retrasado», el oro escondido como motivo, «Nadie lo hizo» y los gritos que aún persiguen. Nota al pie: *Abandonando Ítaca* precede en dos años a la película. **Cierre en verso:** el vencedor «debe estar diciendo seguramente la verdad».
+
+---
+
+## Capítulo 8 — Circe (`odisea8_circe.tex`)
+
+**Estado:** terminado; .docx en el repo.
+
+**Tesis:** ¿y si la gran pasión de Odiseo no fue Penélope sino Circe, y el regreso a Ítaca una fuga de una cárcel de amor? Aflora la historia de amor secreta del libro (sembrada desde el cap. 1 y en «Menelaus»).
+
+**Recorrido:** crítica a la Circe plana de Nolan (ingeniería plástica «a mano» en vez de fondo psicológico). Rampa del canto X: Eolia (la bolsa de los vientos como Pandora; la ingratitud de la tripulación; Sísifo; «Por necedad, todo por necedad… la estupidez humana como tema central» — el motor narrativo en aforismo), la expulsión de Eolo, los lestrigones. Eea: filología de δεινή/«fascinadora» y αὐδήεσσα/«vocihumana» (todo el capítulo se construye, como la Circe del autor, a partir de la voz); las fieras mansas; la diosa que canta y teje; **simetría de las tejedoras** Penélope/Circe con dos citas del epílogo de Candelas Gala a *Abandonando Ítaca* (tercera voz del libro); la transformación en cerdos (filtro que hace olvidar ↔ filtro de Helena); Hermes y el antídoto (veneno/antídoto, varita/espada, cama con condiciones); el juramento y el «bienhermosísimo lecho»; el año de juergas; la condición tremenda: el Hades para hablar con Tiresias; instrucciones del rito; muerte absurda de Elpénor; Circe invisible en la despedida. Narrador no fiable: la diosa «demasiado» asustada. Poema: el funeral de Elpénor con Circe cantando (invención cronológicamente impecable — el entierro es del canto XII), «Y sin embargo, él también, una vez, estuvo vivo», la voz como espejo de los crímenes y **la fórmula de la redención**: «monstruo o no, eres solo un hombre, y todos los hombres, / lo merezcan o no, / pueden ser redimidos» — primera formulación explícita de la tesis del libro, en boca de Circe (por eso el viejo la ama: fue la única que vio al monstruo completo y ofreció perdón).
+
+---
+
 ## Hilos pendientes del libro
 
-1. Los relatos (cantos IX–XII), enhebrados desde el cierre del cap. 6: Polifemo/Οὖτις (el silencio de Nolan: Ulises no habla con el cíclope), Circe (borrador: `odisea4_circe.tex`), el Hades (anunciado en los caps. 3 y 6), las sirenas.
-2. Capítulo Ifigenia/Clitemnestra: el sacrificio, Ulises rastrero, Egisto, Orestes (ojo: Nolan mete Esquilo —*Orestíada*— por Homero). Borrador iniciado: `ifigenia.tex`.
-3. El destino de los feacios (la profecía de Poseidón citada en el cap. 6 se cumple en el canto XIII).
+1. El Hades (canto XI): el viaje ya está encargado por Circe al final del cap. 8; anunciado desde los caps. 3 y 6.
+2. Las sirenas, Escila y Caribdis, las vacas de Helios (canto XII) y el regreso a Eea (entierro de Elpénor, ya usado en el poema del cap. 8).
+3. Capítulo Ifigenia/Clitemnestra: el sacrificio, Ulises rastrero, Egisto, Orestes (ojo: Nolan mete Esquilo —*Orestíada*— por Homero). Borrador iniciado: `ifigenia.tex`.
+4. El destino de los feacios (la profecía de Poseidón citada en el cap. 6 se cumple en el canto XIII).
+5. Posible capítulo final: el material personal de Kavafis/Llach, Blanes, Quelo y la Siseta (retirado del cap. 8 por el autor para ese destino).
+6. Poema «Menelaus» (`menelao.tex` / `menelao_es.tex`): ubicación pendiente (¿capítulo de la vejez de los héroes?).
+7. Borrador huérfano: `odisea4_circe.tex` (superado por `odisea8_circe.tex`; decidir si se borra).
 4. Posible recuperación del material de Emily Wilson (comentado en `odisea2.tex`).
 5. Decisiones de libro: numeración/títulos de capítulos, unificar las referencias cruzadas («como vimos en…») cuando se ensamble el volumen.
