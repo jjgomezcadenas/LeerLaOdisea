@@ -168,8 +168,7 @@ Libro en construcción. Cada capítulo se publica también como artículo (Jot D
 2. Las sirenas, Escila y Caribdis, las vacas de Helios (canto XII) y el regreso a Eea (entierro de Elpénor, ya usado en el poema del cap. 8).
 3. Capítulo Ifigenia/Clitemnestra: el sacrificio, Ulises rastrero, Egisto, Orestes (ojo: Nolan mete Esquilo —*Orestíada*— por Homero). Borrador iniciado: `ifigenia.tex`.
 4. El destino de los feacios (la profecía de Poseidón citada en el cap. 6 se cumple en el canto XIII).
-5. Posible capítulo final: el material personal de Kavafis/Llach, Blanes, Quelo y la Siseta (retirado del cap. 8 por el autor para ese destino).
+5. Posible capítulo final: el material personal de Kavafis/Llach, Blanes, Quelo y la Siseta, retirado del cap. 8 y guardado en `itaca_blanes.tex`.
 6. Poema «Menelaus» (`menelao.tex` / `menelao_es.tex`): ubicación pendiente (¿capítulo de la vejez de los héroes?).
-7. Borrador huérfano: `odisea4_circe.tex` (superado por `odisea8_circe.tex`; decidir si se borra).
 4. Posible recuperación del material de Emily Wilson (comentado en `odisea2.tex`).
 5. Decisiones de libro: numeración/títulos de capítulos, unificar las referencias cruzadas («como vimos en…») cuando se ensamble el volumen.
