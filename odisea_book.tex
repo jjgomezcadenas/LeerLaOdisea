@@ -1,14 +1,27 @@
 \documentclass[11pt,a4paper,openany]{book}
 
+\usepackage{tocloft}
 \input{odisea_common}
 
 \hypersetup{
-  pdftitle={Leer la Odisea en tiempos iletrados}
+  pdftitle={Leer la Odisea en tiempos iletrados},
+  pdfauthor={Juan José Gómez Cadenas}
 }
 
+\title{Leer la \emph{Odisea} en tiempos iletrados}
+\author{Juan José Gómez Cadenas}
+\date{}
+
 \newcommand{\odiseachapter}[2]{\chapter{#2}}
+\setlength{\cftchapnumwidth}{2.5em}
 
 \begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
 
 \input{src/odisea1_nolan}
 \input{src/odisea2_osada}
