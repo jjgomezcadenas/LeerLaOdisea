@@ -162,11 +162,24 @@ Libro en construcción. Cada capítulo se publica también como artículo (Jot D
 
 ---
 
+## Capítulo 9 — Hades (`odisea9_hades.tex`)
+
+**Estado:** terminado; .docx en el repo.
+
+**Tesis:** el canto XI como prueba definitiva de que, para los griegos, la vida tras la muerte no era vida sino «un horrible existir sin existir» — y de ahí que la muerte pueda ser redención (Demócrito, Epicuro). El capítulo más oscuro del libro.
+
+**Recorrido:** elogio a Nolan (la excursión al Hades, junto con las sirenas, está «a la altura de la historia que cuenta»). Especulación propia: Cimeria como ¿noche polar? El umbral del Hades (sin Estigia ni Caronte: nadie ha muerto aún); el rito de la sangre y «la horrible democracia de la muerte» (ninguna película de zombis lo supera); Elpénor primero — la primera compasión genuina del héroe, que nos reconcilia con él; Anticlea y el triple abrazo imposible («el canto más triste… hasta que Primo Levi escribiera *Si esto es un hombre*»); Tiresias: la profecía, y las vacas de Helios como **el examen que a priori puede aprobarse pero siempre se suspende** (Orfeo, la bolsa de los vientos, Perséfone y la granada, Ícaro — el libre albedrío solo en teoría; la lectura condenatoria de Nolan «no es descabellada»); el último viaje del remo y el aviento (nota: la *Telegonía* de Eugamón — Tesprotia, Calídice, Polipetes, y Telégono matando a su padre con el aguijón de raya). Adelanto del desfile heroico: Aquiles («Preferiría doblarme en la tierra para otro y ser siervo… a ser el rey entre toda esta plebe acabada de muertos»), Neoptólemo, Áyax rencoroso hasta en la muerte (nota: el juicio de las armas, ὅπλων κρίσις), Sísifo (eco del cap. 8), y el εἴδωλον de Heracles — **conectado explícitamente con el de Helena** (los dioses fabrican dobles para el trabajo sucio). **Agamenón queda anunciado para el próximo capítulo** (→ Ifigenia/Clitemnestra).
+
+**Poema:** la duda del anciano — ¿fue real el Hades o «una pesadilla invocada por los filtros de Circe»?; «morir y no ser, disolverse en la nada»; el primer beso entre naranjos, las muchachas desnudas en la playa (Nausícaa), los ojos del hijo — «la última redención».
+
+**Cierre en prosa** (el primero desde Nausícaa): la meditación epicúrea — contra nuestra obsesión moderna con la vida eterna, la muerte como liberación definitiva del Hades.
+
+---
+
 ## Hilos pendientes del libro
 
-1. El Hades (canto XI): el viaje ya está encargado por Circe al final del cap. 8; anunciado desde los caps. 3 y 6.
-2. Las sirenas, Escila y Caribdis, las vacas de Helios (canto XII) y el regreso a Eea (entierro de Elpénor, ya usado en el poema del cap. 8).
-3. Capítulo Ifigenia/Clitemnestra: el sacrificio, Ulises rastrero, Egisto, Orestes (ojo: Nolan mete Esquilo —*Orestíada*— por Homero). Borrador iniciado: `ifigenia.tex`.
+1. **Siguiente anunciado desde el propio cap. 9: Agamenón** → capítulo Ifigenia/Clitemnestra (el encuentro en el Hades del canto XI como puerta de entrada; el sacrificio, Ulises rastrero, Egisto, Orestes; ojo: Nolan mete Esquilo —*Orestíada*— por Homero). Borrador iniciado: `ifigenia.tex`.
+2. Las sirenas, Escila y Caribdis, las vacas de Helios (canto XII) y el regreso a Eea (entierro de Elpénor, prometido por Odiseo en el cap. 9 y usado en el poema del cap. 8).
 4. El destino de los feacios (la profecía de Poseidón citada en el cap. 6 se cumple en el canto XIII).
 5. Posible capítulo final: el material personal de Kavafis/Llach, Blanes, Quelo y la Siseta, retirado del cap. 8 y guardado en `itaca_blanes.tex`.
 6. Poema «Menelaus» (`menelao.tex` / `menelao_es.tex`): ubicación pendiente (¿capítulo de la vejez de los héroes?).
