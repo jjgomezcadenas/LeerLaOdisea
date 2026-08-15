@@ -1,0 +1,19 @@
+\usepackage[LGR,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% Transliteraciones con macron+agudo (megalḗtōr, kynṓpidos...)
+\DeclareUnicodeCharacter{1E17}{\'{\=e}}
+\DeclareUnicodeCharacter{1E53}{\'{\=o}}
+
+\usepackage[greek.ancient,spanish]{babel}
+\usepackage[a4paper,margin=2.8cm]{geometry}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+% Griego politónico escrito directamente en UTF-8:
+% \gr{...} para palabras sueltas; bloques con \foreignlanguage{greek}{...}
+\newcommand{\gr}[1]{\foreignlanguage{greek}{#1}}
+
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{0.35em}
+\raggedbottom
