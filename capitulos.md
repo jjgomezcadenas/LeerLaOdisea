@@ -7,6 +7,8 @@ Libro en construcción. Cada capítulo se publica también como artículo (Jot D
 - La memoria personal y familiar del autor como hilo conductor (el padre, el primo Pedro, el hijo Héctor, la hija Irene).
 - Tono: erudición filológica + ironía coloquial deliberada (los giros coloquiales son intencionados, no descuidos).
 
+**Estructura de archivos (desde agosto de 2026):** el contenido de cada capítulo vive en `src/odiseaN_tema.tex`, encabezado con `\odiseachapter{N.ª parte}{Tema}`; el artículo JD se compila con el driver de dos líneas `odiseaNd_tema.tex` (que usa `odisea_single_driver.tex` + `odisea_common.tex`); el libro completo se ensambla en `odisea_book.tex` (clase book, `\odiseachapter` → `\chapter`). Los capítulos 1–10 fueron migrados por el autor; del 11 en adelante nacen ya en este formato.
+
 **Propósito central del libro (motor narrativo):** humanizar a Ulises más allá de Homero. El anciano Ulises de *Abandonando Ítaca* deja de creer en los dioses; sin dioses no hay destino, y sin destino no hay coartada: sus crímenes fueron suyos. El Ulises de Homero *atribuye*; el del autor *asume* — y al final se le abre una posible redención. La crítica a Nolan es, en el fondo, una excusa narrativa más, no el asunto del libro.
 
 ---
@@ -188,9 +190,19 @@ Libro en construcción. Cada capítulo se publica también como artículo (Jot D
 
 ---
 
+## Capítulo 11 — Sirenas (`src/odisea11_sirenas.tex`)
+
+**Estado:** terminado; .docx en el repo. Primera pieza nacida en la estructura nueva (driver `odisea11d_sirenas.tex`; incluida en `odisea_book.tex`).
+
+**Tesis:** el juicio a Nolan — y su absolución. La escena de las sirenas como el momento en que «el cine es capaz de superar la palabra escrita»; y el canto de las sirenas como **lo sagrado que no necesita dioses** — la cara luminosa del motor narrativo.
+
+**Recorrido:** marco cómico: concilio olímpico juzgando a Nolan (Atenea la psiquiatra *new age*, Apolo, Circe, Calipso ofreciéndose a quedárselo, Zeus consultando a Ulises — que está en el Olimpo, con «el último modelo de εἴδωλον, animado por IA» ocupando su plaza en el Hades: triple eco de la casa). Pastiche en verso de las ofensas (Matt elprota, Penélope-Julieta, el pretendiente-vampiro, los feacios eliminados). Veredicto: el Elíseo, por las sirenas. Canto XII con Tobal: regreso a Eea y **entierro de Elpénor** (promesa del cap. 9 cumplida); instrucciones de Circe (cera, mástil, «lazada y nueva lazada»); la despedida sospechosa («¿dejaste ir, sin más, a Odiseo? ¿O el mientisagaz nos está ocultando algo?» — semilla explícita: «Ya veremos más adelante»); el canto de las Sirenas (el cebo es el *conocimiento*: «todo sabemos las dos…») y el silencio de Homero sobre lo que sintió el héroe — la cuenta pendiente que salda el poema propio. Poema de *Abandonando Ítaca*: el sentido de lo sagrado (los hombres cantando de noche «sobre lo que han perdido»), las sirenas como «canciones de los hombres con acordes más puros», y el catálogo de las cosas sencillas — la risa de Penélope, el bebé dormido, las aceitunas, pan y vino — «todas vacías de dioses, pero llenas de gracia». **Cierre en verso:** «tiempo, tiempo que fluye, / huyendo».
+
+---
+
 ## Hilos pendientes del libro
 
-1. Las sirenas, Escila y Caribdis, las vacas de Helios (canto XII) y el regreso a Eea (entierro de Elpénor, prometido por Odiseo en el cap. 9 y usado en el poema del cap. 8).
+1. El final del canto XII: Escila y Caribdis en detalle, las vacas de Helios y el naufragio — y la vuelta del relato a la corte de Alcinoo. Semilla sembrada en el cap. 11: qué oculta la despedida de Circe («Ya veremos más adelante»).
 2. El borrador `ifigenia.tex`: comprobar si queda superado por el cap. 10 (Agamenón y Clitemnestra) o guarda material aprovechable (Orestes, la *Orestíada*).
 3. Vetas apuntadas y no cobradas (para capítulos futuros): el *nostos* de Agamenón como espejo oscuro del de Ulises (su «secreto, siempre secreto» dicta el disfraz de mendigo en Ítaca); Penélope como contrafigura de Clitemnestra.
 4. El destino de los feacios (la profecía de Poseidón citada en el cap. 6 se cumple en el canto XIII).
