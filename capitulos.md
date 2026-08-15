@@ -176,10 +176,23 @@ Libro en construcción. Cada capítulo se publica también como artículo (Jot D
 
 ---
 
+## Capítulo 10 — Agamenón y Clitemnestra (`odisea10_agamenon.tex`)
+
+**Estado:** terminado; .docx en el repo. Pieza de cámara (~2.200 palabras): extensión deliberadamente contenida.
+
+**Tesis:** el matrimonio fallido por excelencia, y el sacrificio de Ifigenia como el crimen que no admite justificación alguna — con Odiseo «casi tan culpable como Agamenón»: la boda-trampa con Aquiles fue invención suya. El capítulo donde el motor narrativo toca su punto más criminal.
+
+**Recorrido:** elogio matizado a Nolan (el atuendo Darth Vader, la Clitemnestra vengadora — que es Esquilo/Eurípides, no Homero, como ya anotaba la nota del cap. 3). En la *Odisea* es **Egisto** quien mata, en emboscada, «tal buey que uno mata en el arrendadero»; la matanza del banquete como boda roja *avant la lettre* (guiño a *Juego de tronos*). Casandra degollada por Clitemnestra sobre el cuerpo del rey. **κυνῶπις otra vez** (eco de Helena, cap. 3): a Agamenón le molesta más la desvergüenza de la asesina que el propio crimen. La misoginia póstuma del Atrida («secreto, siempre secreto… yo ya en mujeres no creo») desmontada con su propio historial: Criseida, la comparación pública con Clitemnestra, Briseida, Casandra — «Menuda familia». El elogio de Penélope en boca del fantasma. Lupita Nyong'o doblando Helena/Clitemnestra (medio hermanas). Poema de *Abandonando Ítaca*: la conspiración de Calchas (¿dioses, cuentas pendientes o dinero? — «los dioses solo existen en la imaginación de los hombres»), Odiseo el más insistente, y **las tres caras de Ifigenia** (la que irrumpe radiante, la que pregunta por qué, la muerta que sigue preguntando). Cierre en prosa: «el sacrificio de un inocente no admite justificación alguna… basta seguir las noticias durante cinco minutos».
+
+**Nota:** la grafía «Calchas» (y «bueys», «aun obrando una recto» en Tobal) es deliberada/verbatim.
+
+---
+
 ## Hilos pendientes del libro
 
-1. **Siguiente anunciado desde el propio cap. 9: Agamenón** → capítulo Ifigenia/Clitemnestra (el encuentro en el Hades del canto XI como puerta de entrada; el sacrificio, Ulises rastrero, Egisto, Orestes; ojo: Nolan mete Esquilo —*Orestíada*— por Homero). Borrador iniciado: `ifigenia.tex`.
-2. Las sirenas, Escila y Caribdis, las vacas de Helios (canto XII) y el regreso a Eea (entierro de Elpénor, prometido por Odiseo en el cap. 9 y usado en el poema del cap. 8).
+1. Las sirenas, Escila y Caribdis, las vacas de Helios (canto XII) y el regreso a Eea (entierro de Elpénor, prometido por Odiseo en el cap. 9 y usado en el poema del cap. 8).
+2. El borrador `ifigenia.tex`: comprobar si queda superado por el cap. 10 (Agamenón y Clitemnestra) o guarda material aprovechable (Orestes, la *Orestíada*).
+3. Vetas apuntadas y no cobradas (para capítulos futuros): el *nostos* de Agamenón como espejo oscuro del de Ulises (su «secreto, siempre secreto» dicta el disfraz de mendigo en Ítaca); Penélope como contrafigura de Clitemnestra.
 4. El destino de los feacios (la profecía de Poseidón citada en el cap. 6 se cumple en el canto XIII).
 5. Posible capítulo final: el material personal de Kavafis/Llach, Blanes, Quelo y la Siseta, retirado del cap. 8 y guardado en `itaca_blanes.tex`.
 6. Poema «Menelaus» (`menelao.tex` / `menelao_es.tex`): ubicación pendiente (¿capítulo de la vejez de los héroes?).
