@@ -200,6 +200,30 @@ Libro en construcción. Cada capítulo se publica también como artículo (Jot D
 
 ---
 
+## Capítulo 12 — La matanza de los pretendientes (`src/odisea12_pretendientes.tex`)
+
+**Estado:** terminado; .docx en el repo; incluido en el libro.
+
+**Tesis:** la μνηστηροφονία revela al Odiseo que Nolan no se atreve a mostrar: no un héroe arrepentido que concede clemencia, sino un vengador implacable que ha decidido exterminar a los ciento ocho pretendientes. La domesticación cinematográfica convierte al tigre de Bengala en gato de angora y reduce también a Telémaco, guerrero y cómplice de su padre, a muchacho torpe y pasivo.
+
+**Recorrido:** la palabra griega que contiene por sí sola «la matanza de los pretendientes»; crítica de la batalla de Nolan y de su Telémaco. Canto XXI: Penélope propone la prueba; Telémaco está a punto de tensar el arco al cuarto intento; Leodes, el único galán contrario a los excesos, fracasa y profetiza el desastre; Eurímaco teme la deshonra; Antínoo aplaza su intento; Penélope defiende al mendigo sin haber reconocido a su marido y conserva así su agencia; Telémaco aparta a su madre y entrega el arco. El arco canta «como voz de vencejo». Canto XXII: Antínoo muere mientras bebe; Eurímaco ofrece reparación y Odiseo rechaza cualquier perdón; los pretendientes, armados, se defienden; Telémaco mata a Anfínomo y combate junto a su padre, Eumeo y Filetio; Melantio abastece de armas a los galanes; Atenea interviene primero como Méntor y después desvía las lanzas. Dos lecturas de la victoria: intervención divina o fortuna del héroe. Poema de *Abandonando Ítaca*: el anciano se reconoce como «un matón cruel y astuto / que tuvo más suerte que los demás». Odiseo degüella al inocente Leodes y revisa la sala para que nadie escape. Euriclea encuentra al bebé que amamantó convertido en un león cubierto de sangre.
+
+**Cierre:** «Parece que la masacre ha terminado, ¿no?». El capítulo se detiene justo antes del episodio más infame y entrega el relato directamente al siguiente.
+
+---
+
+## Capítulo 13 — El asesinato de las niñas (`src/odisea13_ninas.tex`)
+
+**Estado:** terminado; .docx en el repo; incluido en el libro. «Niñas» es una elección literaria deliberada, no una afirmación filológica sobre la edad que les atribuye Homero.
+
+**Tesis:** el asesinato de las doce esclavas es el episodio que vuelve imperdonable a Odiseo y explica de verdad por qué el cine teme a Homero. El contraste con Aquiles demuestra que la brutalidad del héroe antiguo todavía puede humanizarse mediante la compasión; Odiseo y Telémaco, en cambio, niegan esa compasión a las muchachas.
+
+**Recorrido:** memoria personal de la lectura a los quince años y del asco que aplazó durante meses el reencuentro con Penélope; Euriclea señala a doce esclavas; Odiseo las obliga a retirar los cadáveres y limpiar la sangre antes de ordenar que las maten; Telémaco rechaza la espada como muerte demasiado limpia y las ahorca; Melantio es mutilado; las esclavas fieles abrazan después al vencedor. El golpe se compara con el final de la *Ilíada*. Injerto amplio de *Abandonando Ítaca*: Patroclo, Pentesilea y Héctor; la interpretación del amor fatal entre héroes; Aquiles arrastra el cadáver de Héctor para ocultar su corazón roto y termina llorando con Príamo antes de devolverle el cuerpo de su hijo.
+
+**Cierre:** Aquiles puede entrar en el cine porque su compasión final lo vuelve humano. La iniquidad de Odiseo resulta, por el contrario, demasiado moderna: campos de concentración, purgas, Gran Salto Adelante y mujeres ahorcadas por los ayatolás. Repetición circular y sentenciosa: «No es de extrañar que el cine tema a Homero».
+
+---
+
 ## Hilos pendientes del libro
 
 1. El final del canto XII: Escila y Caribdis en detalle, las vacas de Helios y el naufragio — y la vuelta del relato a la corte de Alcinoo. Semilla sembrada en el cap. 11: qué oculta la despedida de Circe («Ya veremos más adelante»).
