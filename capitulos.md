@@ -224,6 +224,18 @@ Libro en construcción. Cada capítulo se publica también como artículo (Jot D
 
 ---
 
+## Capítulo 14 — Penélope (`src/odisea14_penelope.tex`)
+
+**Estado:** terminado; .docx en el repo; incluido en el libro.
+
+**Tesis:** el reencuentro de Penélope y Odiseo no es la reconciliación sentimental que ofrece Nolan, sino el encuentro cauteloso de dos extraños después de veinte años. Penélope conserva voz, voluntad y astucia propias: la prueba del arco fue otra treta para no casarse y ni la cicatriz basta para vencer su desconfianza; solo la seña íntima del lecho de olivo permite el reconocimiento.
+
+**Recorrido:** Euriclea despierta a Penélope y le anuncia el regreso; la reina atribuye la matanza a un dios antes que exponerse de nuevo a la esperanza; la cicatriz la ablanda, pero no la convence; descenso a la sala y silencio entre los esposos; impaciencia de Telémaco y defensa de las señas privadas. Reflexión sobre la muchacha que apenas convivió con Odiseo antes de pasar dos décadas sola y casi cuatro años resistiendo a los pretendientes: quizás lo que deseaba era que la dejaran en paz. Odiseo, más preocupado por la reacción del pueblo, organiza una boda falsa para ocultar la matanza; las comadres y los compadres condenan inmediatamente a Penélope. Atenea remocea al héroe; Penélope ordena sacar el lecho y provoca la indignada descripción del olivo vivo convertido en pie de cama. En su rendición rompe además una lanza por Helena, empujada al «malhacer deshonesto» por un dios. Odiseo revela el viaje del remo que aún le debe a Tiresias y, después del lecho, le contará también a su esposa todo cuanto vivió con Circe y Calipso.
+
+**Cierre:** final feliz deliberadamente falso: a Penélope no solo le toca escuchar las aventuras y las infidelidades de su marido, sino aprender a convivir con un extraño.
+
+---
+
 ## Hilos pendientes del libro
 
 1. El final del canto XII: Escila y Caribdis en detalle, las vacas de Helios y el naufragio — y la vuelta del relato a la corte de Alcinoo. Semilla sembrada en el cap. 11: qué oculta la despedida de Circe («Ya veremos más adelante»).
