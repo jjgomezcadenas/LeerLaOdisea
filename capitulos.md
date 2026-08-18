@@ -236,6 +236,18 @@ Libro en construcción. Cada capítulo se publica también como artículo (Jot D
 
 ---
 
+## Capítulo 15 — Homero (`src/odisea15_homero.tex`)
+
+**Estado:** terminado; incluido en el libro. Cierre de la acción de la *Odisea* y apertura de la cuestión homérica.
+
+**Tesis:** el canto XXIV reúne tres finales: el regreso de los pretendientes al Hades, el reconocimiento entre Odiseo y Laertes y la última revuelta de Ítaca, detenida por Atenea mediante un *deus ex machina* literal. El silencio sobre las esclavas asesinadas responde ante todo a su condición servil, no a la irrelevancia de las mujeres en un poema cuyas verdaderas protagonistas son, en gran medida, femeninas. La aparente mezcla de voces, repeticiones y capas del poema encuentra en la teoría oral-formularia de Milman Parry una explicación compatible con un Homero único y plural.
+
+**Recorrido:** las sombras de los pretendientes conducidas por Hermes y el diálogo entre Agamenón y Aquiles; la ausencia de las doce esclavas y el espejo irónico de la desigualdad contemporánea; «Lecciones de conducir», poema personal sobre el padre del autor, como contraste con la contenida anagnórisis de Laertes; la cicatriz y los árboles del huerto; la rebelión de los familiares, la muerte de Eupites a manos de un Laertes fortalecido por Atenea y la paz impuesta por los dioses; crítica del final cinematográfico de Nolan. De ahí, la pregunta por la existencia de Homero: Parry, los bertsolaris, las peleas de gallos y el jazz como modelos de improvisación apoyada en estructuras memorizadas; epítetos, fórmulas métricas y composición oral.
+
+**Cierre:** Homero como «la voz en cuyo eco resuenan muchas voces», un autor individual y colectivo a la vez. «La vida es corta, pero el arte es inmortal».
+
+---
+
 ## Hilos pendientes del libro
 
 1. El final del canto XII: Escila y Caribdis en detalle, las vacas de Helios y el naufragio — y la vuelta del relato a la corte de Alcinoo. Semilla sembrada en el cap. 11: qué oculta la despedida de Circe («Ya veremos más adelante»).
