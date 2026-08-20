@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the complete Odisea book as PDF and DOCX."""
+"""Build the complete Odisea book as PDF, optionally also as DOCX."""
 
 from __future__ import annotations
 
@@ -81,29 +81,26 @@ def run_command(command: Sequence[str]) -> None:
         raise BuildError(message)
 
 
-def show_dry_run(sources: Sequence[Path]) -> None:
+def show_dry_run(sources: Sequence[Path], build_docx: bool) -> None:
     print(f"Book driver: {BOOK_TEX.relative_to(ROOT)}")
     print("Chapter order:")
     for source in sources:
         print(f"  {source.relative_to(ROOT)}")
     print(f"PDF:  {PDF_OUTPUT.name}")
-    print(f"DOCX: {DOCX_OUTPUT.name}")
+    if build_docx:
+        print(f"DOCX: {DOCX_OUTPUT.name}")
     print("All intermediate files will be built in a temporary directory.")
 
 
-def build_book(sources: Sequence[Path]) -> None:
+def build_book(sources: Sequence[Path], build_docx: bool) -> None:
     latexmk = require_tool("latexmk")
-    pandoc = require_tool("pandoc")
+    pandoc = require_tool("pandoc") if build_docx else None
 
     with tempfile.TemporaryDirectory(
         prefix=".compile_book_build_", dir=str(ROOT)
     ) as temporary_dir:
         staging_dir = Path(temporary_dir)
         staged_pdf = staging_dir / PDF_OUTPUT.name
-        staged_docx = staging_dir / DOCX_OUTPUT.name
-        pandoc_macros = staging_dir / "pandoc_book_macros.tex"
-        pandoc_macros.write_text(PANDOC_CHAPTER_MACRO, encoding="utf-8")
-
         print(f"Compiling {BOOK_TEX.name} to PDF")
         run_command(
             [
@@ -120,37 +117,48 @@ def build_book(sources: Sequence[Path]) -> None:
         if not staged_pdf.is_file():
             raise BuildError(f"latexmk did not create {staged_pdf.name}")
 
-        print("Converting root src/ chapters to DOCX")
-        run_command(
-            [
-                pandoc,
-                str(COMMON_TEX),
-                str(pandoc_macros),
-                *(str(source) for source in sources),
-                "--from=latex",
-                "--to=docx",
-                "--toc",
-                "--metadata",
-                "title=Leer la Odisea en tiempos iletrados",
-                "--metadata",
-                "author=Juan José Gómez Cadenas",
-                "--output",
-                str(staged_docx),
-            ]
-        )
-        if not staged_docx.is_file():
-            raise BuildError(f"pandoc did not create {staged_docx.name}")
+        if build_docx:
+            staged_docx = staging_dir / DOCX_OUTPUT.name
+            pandoc_macros = staging_dir / "pandoc_book_macros.tex"
+            pandoc_macros.write_text(PANDOC_CHAPTER_MACRO, encoding="utf-8")
+            print("Converting root src/ chapters to DOCX")
+            run_command(
+                [
+                    pandoc,
+                    str(COMMON_TEX),
+                    str(pandoc_macros),
+                    *(str(source) for source in sources),
+                    "--from=latex",
+                    "--to=docx",
+                    "--toc",
+                    "--metadata",
+                    "title=Leer la Odisea en tiempos iletrados",
+                    "--metadata",
+                    "author=Juan José Gómez Cadenas",
+                    "--output",
+                    str(staged_docx),
+                ]
+            )
+            if not staged_docx.is_file():
+                raise BuildError(f"pandoc did not create {staged_docx.name}")
 
         os.replace(staged_pdf, PDF_OUTPUT)
-        os.replace(staged_docx, DOCX_OUTPUT)
+        if build_docx:
+            os.replace(staged_docx, DOCX_OUTPUT)
 
     print(f"PDF:  {PDF_OUTPUT.name}")
-    print(f"DOCX: {DOCX_OUTPUT.name}")
+    if build_docx:
+        print(f"DOCX: {DOCX_OUTPUT.name}")
 
 
 def parse_args(argv: Sequence[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Build odisea_book.pdf and odisea_book.docx from root src/."
+        description="Build odisea_book.pdf from root src/."
+    )
+    parser.add_argument(
+        "--docx",
+        action="store_true",
+        help="also generate odisea_book.docx",
     )
     parser.add_argument(
         "--dry-run",
@@ -165,9 +173,9 @@ def main(argv: Sequence[str] | None = None) -> int:
     try:
         sources = discover_sources()
         if args.dry_run:
-            show_dry_run(sources)
+            show_dry_run(sources, args.docx)
         else:
-            build_book(sources)
+            build_book(sources, args.docx)
         return 0
     except BuildError as exc:
         print(f"error: {exc}", file=sys.stderr)

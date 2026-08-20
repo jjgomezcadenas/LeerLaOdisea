@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compile individual JD chapters to PDF and DOCX."""
+"""Compile individual JD chapters to PDF, optionally also to DOCX."""
 
 from __future__ import annotations
 
@@ -166,7 +166,7 @@ def build_chapter(
     chapter: Chapter,
     staging_dir: Path,
     latexmk: str,
-    pandoc: str,
+    pandoc: str | None,
 ) -> None:
     print(f"Compiling {chapter.short_name} ({chapter.source.name})")
 
@@ -203,36 +203,41 @@ def build_chapter(
     if not pdf_path.is_file():
         raise BuildError(f"latexmk did not create {pdf_path.name}")
 
-    docx_path = staging_dir / f"{chapter.output_stem}.docx"
-    run_command(
-        [
-            pandoc,
-            str(COMMON_TEX),
-            str(chapter.source),
-            "--from=latex",
-            "--to=docx",
-            "--metadata",
-            f"title={chapter_title(chapter)}",
-            "--metadata",
-            "author=Juan José Gómez Cadenas",
-            "--output",
-            str(docx_path),
-        ]
-    )
-    if not docx_path.is_file():
-        raise BuildError(f"pandoc did not create {docx_path.name}")
+    if pandoc is not None:
+        docx_path = staging_dir / f"{chapter.output_stem}.docx"
+        run_command(
+            [
+                pandoc,
+                str(COMMON_TEX),
+                str(chapter.source),
+                "--from=latex",
+                "--to=docx",
+                "--metadata",
+                f"title={chapter_title(chapter)}",
+                "--metadata",
+                "author=Juan José Gómez Cadenas",
+                "--output",
+                str(docx_path),
+            ]
+        )
+        if not docx_path.is_file():
+            raise BuildError(f"pandoc did not create {docx_path.name}")
 
 
-def publish_outputs(chapters: Iterable[Chapter], staging_dir: Path) -> None:
+def publish_outputs(
+    chapters: Iterable[Chapter], staging_dir: Path, publish_docx: bool
+) -> None:
     PDF_DIR.mkdir(exist_ok=True)
-    DOCX_DIR.mkdir(exist_ok=True)
+    if publish_docx:
+        DOCX_DIR.mkdir(exist_ok=True)
     for chapter in chapters:
         staged_pdf = staging_dir / f"{chapter.output_stem}.pdf"
-        staged_docx = staging_dir / f"{chapter.output_stem}.docx"
         os.replace(staged_pdf, PDF_DIR / staged_pdf.name)
-        os.replace(staged_docx, DOCX_DIR / staged_docx.name)
         print(f"  PDF:  {PDF_DIR.relative_to(ROOT) / staged_pdf.name}")
-        print(f"  DOCX: {DOCX_DIR.relative_to(ROOT) / staged_docx.name}")
+        if publish_docx:
+            staged_docx = staging_dir / f"{chapter.output_stem}.docx"
+            os.replace(staged_docx, DOCX_DIR / staged_docx.name)
+            print(f"  DOCX: {DOCX_DIR.relative_to(ROOT) / staged_docx.name}")
 
 
 def show_chapters(chapters: Sequence[Chapter]) -> None:
@@ -244,19 +249,20 @@ def show_chapters(chapters: Sequence[Chapter]) -> None:
         )
 
 
-def show_dry_run(chapters: Sequence[Chapter]) -> None:
+def show_dry_run(chapters: Sequence[Chapter], build_docx: bool) -> None:
     for chapter in chapters:
         print(f"{chapter.short_name}: {chapter.source.relative_to(ROOT)}")
         print("  temporary driver:")
         for line in wrapper_text(chapter).splitlines():
             print(f"    {line}")
         print(f"  PDF:  pdf/{chapter.output_stem}.pdf")
-        print(f"  DOCX: docx/{chapter.output_stem}.docx")
+        if build_docx:
+            print(f"  DOCX: docx/{chapter.output_stem}.docx")
 
 
 def parse_args(argv: Sequence[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Compile JD chapter sources to clean PDF and DOCX outputs."
+        description="Compile JD chapter sources to clean PDF outputs."
     )
     parser.add_argument(
         "chapter",
@@ -264,6 +270,11 @@ def parse_args(argv: Sequence[str]) -> argparse.Namespace:
         help="short or full chapter name, for example odisea1 or odisea1d_nolan.tex",
     )
     parser.add_argument("--all", action="store_true", help="compile every chapter")
+    parser.add_argument(
+        "--docx",
+        action="store_true",
+        help="also generate DOCX output",
+    )
     parser.add_argument("--list", action="store_true", help="list discovered chapters")
     parser.add_argument(
         "--dry-run",
@@ -273,8 +284,10 @@ def parse_args(argv: Sequence[str]) -> argparse.Namespace:
     args = parser.parse_args(argv)
 
     if args.list:
-        if args.chapter or args.all or args.dry_run:
-            parser.error("--list cannot be combined with a chapter, --all, or --dry-run")
+        if args.chapter or args.all or args.dry_run or args.docx:
+            parser.error(
+                "--list cannot be combined with a chapter, --all, --dry-run, or --docx"
+            )
     elif bool(args.chapter) == bool(args.all):
         parser.error("choose exactly one chapter or --all")
     return args
@@ -290,20 +303,21 @@ def main(argv: Sequence[str] | None = None) -> int:
 
         selected = chapters if args.all else [resolve_chapter(args.chapter, chapters)]
         if args.dry_run:
-            show_dry_run(selected)
+            show_dry_run(selected, args.docx)
             return 0
 
         latexmk = require_tool("latexmk")
-        pandoc = require_tool("pandoc")
+        pandoc = require_tool("pandoc") if args.docx else None
         PDF_DIR.mkdir(exist_ok=True)
-        DOCX_DIR.mkdir(exist_ok=True)
+        if args.docx:
+            DOCX_DIR.mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(
             prefix=".compile_jd_build_", dir=str(ROOT)
         ) as temporary_dir:
             staging_dir = Path(temporary_dir)
             for chapter in selected:
                 build_chapter(chapter, staging_dir, latexmk, pandoc)
-            publish_outputs(selected, staging_dir)
+            publish_outputs(selected, staging_dir, args.docx)
         return 0
     except BuildError as exc:
         print(f"error: {exc}", file=sys.stderr)
