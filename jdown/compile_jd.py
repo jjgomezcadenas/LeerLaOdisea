@@ -144,10 +144,22 @@ def require_tool(name: str) -> str:
     return executable
 
 
-def run_command(command: Sequence[str]) -> None:
+def tex_environment() -> dict[str, str]:
+    environment = os.environ.copy()
+    if "TEXMFVAR" not in environment:
+        cache_dir = Path(tempfile.gettempdir()) / "leerlaodisea-texmf-var"
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        environment["TEXMFVAR"] = str(cache_dir)
+    return environment
+
+
+def run_command(
+    command: Sequence[str], environment: dict[str, str] | None = None
+) -> None:
     completed = subprocess.run(
         command,
         cwd=str(ROOT),
+        env=environment,
         text=True,
         errors="replace",
         stdout=subprocess.PIPE,
@@ -186,14 +198,15 @@ def build_chapter(
         run_command(
             [
                 latexmk,
-                "-pdf",
+                "-lualatex",
                 "-interaction=nonstopmode",
                 "-halt-on-error",
                 "-file-line-error",
                 f"-outdir={staging_dir}",
                 f"-jobname={chapter.output_stem}",
                 str(wrapper_path),
-            ]
+            ],
+            tex_environment(),
         )
     finally:
         if wrapper_path is not None:

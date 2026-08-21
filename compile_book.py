@@ -63,10 +63,26 @@ def require_tool(name: str) -> str:
     return executable
 
 
-def run_command(command: Sequence[str]) -> None:
+def tex_environment() -> dict[str, str]:
+    environment = os.environ.copy()
+    if "TEXMFVAR" not in environment:
+        cache_dir = Path(tempfile.gettempdir()) / "leerlaodisea-texmf-var"
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        environment["TEXMFVAR"] = str(cache_dir)
+    existing_inputs = environment.get("TEXINPUTS", "")
+    environment["TEXINPUTS"] = f"{ROOT}//{os.pathsep}{existing_inputs}"
+    return environment
+
+
+def run_command(
+    command: Sequence[str],
+    environment: dict[str, str] | None = None,
+    working_directory: Path = ROOT,
+) -> None:
     completed = subprocess.run(
         command,
-        cwd=str(ROOT),
+        cwd=str(working_directory),
+        env=environment,
         text=True,
         errors="replace",
         stdout=subprocess.PIPE,
@@ -105,14 +121,16 @@ def build_book(sources: Sequence[Path], build_docx: bool) -> None:
         run_command(
             [
                 latexmk,
-                "-pdf",
+                "-lualatex",
                 "-interaction=nonstopmode",
                 "-halt-on-error",
                 "-file-line-error",
                 f"-outdir={staging_dir}",
                 "-jobname=odisea_book",
                 str(BOOK_TEX),
-            ]
+            ],
+            tex_environment(),
+            staging_dir,
         )
         if not staged_pdf.is_file():
             raise BuildError(f"latexmk did not create {staged_pdf.name}")

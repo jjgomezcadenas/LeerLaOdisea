@@ -1,13 +1,7 @@
-\usepackage[LGR,T1]{fontenc}
-\usepackage[utf8]{inputenc}
-
-% Transliteraciones con macron+agudo (megalḗtōr, kynṓpidos...)
-\DeclareUnicodeCharacter{1E17}{\'{\=e}}
-\DeclareUnicodeCharacter{1E53}{\'{\=o}}
-\DeclareUnicodeCharacter{1E15}{\`{\=e}}
-\DeclareUnicodeCharacter{0112}{\=E}
-
+\usepackage{fontspec}
+\setmainfont{Libertinus Serif}
 \usepackage[greek.ancient,spanish]{babel}
+\babelfont[greek]{rm}{Libertinus Serif}
 \usepackage[a4paper,margin=2.8cm]{geometry}
 \usepackage{microtype}
 \usepackage[hidelinks]{hyperref}
