@@ -1,0 +1,478 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage[a4paper,margin=2.4cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+
+\definecolor{rojocambio}{HTML}{B00020}
+\definecolor{grislinea}{HTML}{555555}
+\newcounter{cambio}
+
+\newcommand{\camb}[1]{\textcolor{rojocambio}{\textit{#1}}}
+\newcommand{\propuesta}[6]{%
+  \refstepcounter{cambio}%
+  \subsection*{Cambio \thecambio\enspace---\enspace #1}%
+  \noindent{\color{grislinea}\texttt{\detokenize{#2}}, #3.}\par
+  \smallskip
+  \noindent\textbf{Motivo.} #4\par
+  \smallskip
+  \noindent\textbf{Original.}\par
+  \begin{quote}\normalfont #5\end{quote}
+  \noindent\textbf{Sugerencia.}\par
+  \begin{quote}\normalfont #6\end{quote}
+  \noindent\textcolor{grislinea}{$\square$ Aprobar\qquad $\square$ Rechazar\qquad $\square$ Revisar}\par
+  \medskip\hrule\medskip
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textit{Leer la Odisea en tiempos iletrados}}
+\fancyhead[R]{Informe editorial}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{1}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+\title{\textbf{Informe editorial de\\
+\textit{Leer la Odisea en tiempos iletrados}}}
+\author{}
+\date{23 de agosto de 2026}
+
+\begin{document}
+\maketitle
+
+\section{Criterio de la revisión}
+
+Este informe revisa los veinte capítulos activos que carga \texttt{odisea\_book.tex}. Las líneas indicadas son las líneas físicas de los archivos fuente en el estado del 23 de agosto de 2026. No se ha modificado ninguno de esos archivos.
+
+Se han buscado erratas, problemas ortográficos o sintácticos, repeticiones léxicas próximas y reiteraciones de una idea ya formulada. Se excluyen del escrutinio los pasajes comentados en LaTeX. Las citas de Homero se respetan como texto de Rodríguez Tobal y no se normalizan, aunque contengan giros deliberadamente arcaizantes. Tampoco se consideran defectos las anáforas, los estribillos, las enumeraciones enfáticas ni las fórmulas homéricas cuando cumplen una función rítmica o estructural.
+
+En cada propuesta, el original aparece en redonda. La sugerencia reproduce el pasaje y marca en \camb{cursiva roja} exclusivamente lo que cambia. Las observaciones rotuladas como \emph{repetición} son más discutibles que las erratas y quedan expresamente sometidas al criterio del autor.
+
+\tableofcontents
+\clearpage
+
+\section{Introducción: De libros y cine}
+
+\propuesta{Concordancia verbal}{src/odisea0_intro.tex}{línea 71}{La construcción condicional en imperfecto pide imperfecto de subjuntivo; \emph{se perpetúe} rompe la correlación temporal.}{Claro que también sería deseable que la voluntad pedagógica que mostraron Rossi y la RAI se perpetúe, sobre todo si tenemos en cuenta los argumentos sobre los que venimos reflexionando desde hace un rato.}{Claro que también sería deseable que la voluntad pedagógica que mostraron Rossi y la RAI \camb{se perpetuara}, sobre todo si tenemos en cuenta los argumentos sobre los que venimos reflexionando desde hace un rato.}
+
+\propuesta{Repetición léxica}{src/odisea0_intro.tex}{línea 79}{\emph{Traducción} aparece tres veces en el párrafo. La segunda puede sustituirse por un pronombre sin perder precisión.}{La película se estrenó en julio de 2026, a la vez que salía a imprenta la maravillosa y atrevida traducción de la \emph{Odisea} de Juan Manuel Rodríguez Tobal, publicada por Hiperión. Confieso que la lectura de esa traducción fue, literalmente, un empujón al túnel del tiempo.}{La película se estrenó en julio de 2026, a la vez que salía a imprenta la maravillosa y atrevida traducción de la \emph{Odisea} de Juan Manuel Rodríguez Tobal, publicada por Hiperión. Confieso que \camb{su lectura} fue, literalmente, un empujón al túnel del tiempo.}
+
+\section{Primera parte: El cine teme a Homero}
+
+\propuesta{Puntuación}{src/odisea1_nolan.tex}{línea 127}{La conjunción \emph{ni} coordina dos complementos de \emph{hablarnos}; la coma interpuesta no es necesaria.}{Ignora cómo Polifemo ---nada menos que el hijo de un dios--- se pasa la \emph{xenía} por el forro y no se molesta en hablarnos de un personaje central, Nausícaa, ni de su gente, los feacios, a pesar de que estos se caracterizan, precisamente, por respetarla a un elevado coste.}{Ignora cómo Polifemo ---nada menos que el hijo de un dios--- se pasa la \emph{xenía} por el forro y no se molesta en hablarnos de un personaje central, Nausícaa\camb{ ni} de su gente, los feacios, a pesar de que estos se caracterizan, precisamente, por respetarla a un elevado coste.}
+
+\section{Segunda parte: Una osada Odisea}
+
+\propuesta{Ortografía de nombre propio}{src/odisea2_osada.tex}{línea 5}{El programa ferroviario europeo se escribe \emph{Interrail}, con mayúscula inicial.}{Luego hicimos algunos otros recados, preparando su inminente viaje en tren por Europa, el interrail bendito que une los veranos de tantos jóvenes del continente.}{Luego hicimos algunos otros recados, preparando su inminente viaje en tren por Europa, el \camb{Interrail} bendito que une los veranos de tantos jóvenes del continente.}
+
+\propuesta{Puntuación de inciso}{src/odisea2_osada.tex}{línea 13}{La locución incidental \emph{cómo no} debe quedar delimitada por comas.}{Y cómo no, el libro me lo quedé yo (en préstamo).}{Y\camb{,} cómo no, el libro me lo quedé yo (en préstamo).}
+
+\propuesta{Mayúscula dentro de una misma oración}{src/odisea2_osada.tex}{líneas 227--233}{La estrofa nueva no inicia una oración nueva: el verso anterior termina en coma y la subordinada continúa.}{Ya nada más objeto, compañero,\\
+Vayacondios, por el ponto mi Ulises,\\
+que es vagabundo, mañoso y artero,
+
+Que es de todos los hombres el primero\\
+y el último también, hombre de ardides,\\
+como todo hombre, falso y verdadero.}{Ya nada más objeto, compañero,\\
+Vayacondios, por el ponto mi Ulises,\\
+que es vagabundo, mañoso y artero,
+
+\camb{que} es de todos los hombres el primero\\
+y el último también, hombre de ardides,\\
+como todo hombre, falso y verdadero.}
+
+\section{Tercera parte: Helena}
+
+\propuesta{Ortografía de título}{src/odisea3_helena.tex}{línea 73}{En español solo lleva mayúscula la primera palabra del título. El resto del libro emplea ya la forma correcta.}{El astuto director desea evitar que la película se le deslice del lado de \emph{Harry Potter} o \emph{El Señor de los Anillos} y prefiere salir del paso con cuatro menciones indirectas y una proyección psicológica del síndrome postraumático del guerrero.}{El astuto director desea evitar que la película se le deslice del lado de \emph{Harry Potter} o \emph{El \camb{señor de los anillos}} y prefiere salir del paso con cuatro menciones indirectas y una proyección psicológica del síndrome postraumático del guerrero.}
+
+\section{Menelao}
+
+\propuesta{Puntuación de inciso}{src/odisea3_menelao_es.tex}{líneas 155--158}{La locución \emph{de hecho} es incidental y pide coma.}{Y así, Menelao no habla de Helena,\\
+hace ya tantos años que se fue,\\
+de hecho desapareció poco después\\
+de la visita de Telémaco a Esparta.}{Y así, Menelao no habla de Helena,\\
+hace ya tantos años que se fue,\\
+de hecho\camb{,} desapareció poco después\\
+de la visita de Telémaco a Esparta.}
+
+\propuesta{Cierre de inciso}{src/odisea3_menelao_es.tex}{línea 200}{El inciso que compara dos motivaciones debe cerrarse antes de coordinar el segundo verbo principal.}{Odiseo reflexiona sobre el primer rescate de Helena, más motivado quizás por la codicia del botín que por la necesidad de recuperar a la adúltera y muestra la futilidad de toda la empresa.}{Odiseo reflexiona sobre el primer rescate de Helena, más motivado quizás por la codicia del botín que por la necesidad de recuperar a la adúltera\camb{,} y muestra la futilidad de toda la empresa.}
+
+\propuesta{Construcción correlativa}{src/odisea3_menelao_es.tex}{línea 253}{La serie \emph{ni..., ni..., sino...} queda sin primer término negativo y choca con \emph{al más humilde} colocado antes de ella.}{La mía aquí le hace elegir al más humilde de los héroes, ni al hermoso ---y cobarde--- Paris, ni al aguerrido ---e inútilmente enamorado--- Menelao, sino al callado, gentil Deífobo.}{La mía aquí le hace elegir \camb{no al hermoso ---y cobarde--- Paris, ni al aguerrido ---e inútilmente enamorado--- Menelao, sino al más humilde de los héroes, el callado, gentil Deífobo}.}
+
+\section{Cuarta parte: Calipso}
+
+\propuesta{Repetición léxica}{src/odisea4_calipso.tex}{línea 44}{\emph{Falta} se repite dos veces dentro de una enumeración muy breve.}{La claridad con que Homero desvela su hipocresía, su falta de escrúpulos y su falta de compasión es apabullante.}{La claridad con que Homero desvela su hipocresía, su falta de escrúpulos y su \camb{ausencia} de compasión es apabullante.}
+
+\propuesta{Repetición léxica}{src/odisea4_calipso.tex}{línea 48}{\emph{Puesta en escena} y \emph{escenas} quedan demasiado próximas.}{En el caso del cine, el problema es todavía peor, porque cualquier puesta en escena de las deidades evoca en los espectadores las escenas de acción de mil películas de espada y brujería, o las versiones Marvel de esos mismos dioses.}{En el caso del cine, el problema es todavía peor, porque cualquier \camb{representación} de las deidades evoca en los espectadores las escenas de acción de mil películas de espada y brujería, o las versiones Marvel de esos mismos dioses.}
+
+\section{Quinta parte: Nausícaa}
+
+\propuesta{Puntuación de locución}{src/odisea5_nausicaa.tex}{línea 13}{La locución explicativa \emph{o sea} debe ir seguida de coma.}{También nos dice «niña en presencia y figura igual a las siemprevivas», o sea una muchachita tan hermosa como una deidad.}{También nos dice «niña en presencia y figura igual a las siemprevivas», o sea\camb{,} una muchachita tan hermosa como una deidad.}
+
+\propuesta{Locución contaminada}{src/odisea5_nausicaa.tex}{línea 142}{\emph{En cuero picado} parece un cruce involuntario entre \emph{en cueros} y \emph{en pelota picada}.}{Sale de entre las matas, se cubre con lo que puede y se dirige a las muchachas, casi en cuero picado.}{Sale de entre las matas, se cubre con lo que puede y se dirige a las muchachas, \camb{casi en cueros}.}
+
+\propuesta{Construcción correlativa}{src/odisea5_nausicaa.tex}{línea 222}{En la lengua cuidada, \emph{no solo} se corresponde con \emph{sino también}.}{Nausícaa no solo es valiente, también es generosa.}{Nausícaa no solo es valiente, \camb{sino también} generosa.}
+
+\propuesta{Repetición léxica}{src/odisea5_nausicaa.tex}{línea 240}{\emph{Así} aparece dos veces en dos oraciones consecutivas.}{Pero Ulises, pudoroso, le pide a las muchachas que le dejen arreglarse solo. Así lo hace, un poco apartado, y Atenea aprovecha para maquillarlo divinalmente, así que cuando sale a la vista, está hecho un brazo de mar.}{Pero Ulises, pudoroso, le pide a las muchachas que le dejen arreglarse solo. Así lo hace, un poco apartado, y Atenea aprovecha para maquillarlo divinalmente\camb{. Cuando} sale a la vista, está hecho un brazo de mar.}
+
+\propuesta{Puntuación}{src/odisea5_nausicaa.tex}{línea 258}{No se separa con coma la consecutiva formada por \emph{tanto que}.}{El patito (o más bien el ganso) feo se ha convertido en un apuesto galán por obra y gracia de Atenea, que de paso habrá aprovechado para quitarle alguna cana; tanto, que a la princesa le da por pensar que uno así no sería mal marido.}{El patito (o más bien el ganso) feo se ha convertido en un apuesto galán por obra y gracia de Atenea, que de paso habrá aprovechado para quitarle alguna cana; tanto\camb{ que} a la princesa le da por pensar que uno así no sería mal marido.}
+
+\propuesta{Elipsis poco clara}{src/odisea5_nausicaa.tex}{línea 275}{Tras \emph{el tema del matrimonio sigue}, la coordinación \emph{pero también el de la maledicencia} deja el verbo excesivamente elidido.}{El tema del matrimonio con el extranjero sigue dando vueltas en el relato, pero también el de la maledicencia, y eso que todavía no se habían inventado las redes sociales.}{El tema del matrimonio con el extranjero sigue dando vueltas en el relato, \camb{y también lo hace} el de la maledicencia, y eso que todavía no se habían inventado las redes sociales.}
+
+\propuesta{Posesivo innecesario}{src/odisea5_nausicaa.tex}{línea 305}{En español se cierran \emph{los ojos}, no normalmente \emph{tus ojos}; el posesivo parece un calco del inglés.}{Cada vez que cierras tus ojos al tenderte en la arena,}{Cada vez que cierras \camb{los} ojos al tenderte en la arena,}
+
+\section{Sexta parte: Esqueria}
+
+\propuesta{Correlación temporal}{src/odisea6_esqueria.tex}{línea 179}{La acomodación de Telémaco ocurrió en un capítulo anterior al momento narrado; el pluscuamperfecto fija mejor la anterioridad.}{Terminada la conversación, Arete en persona se ocupa de acomodar a Odiseo ---por supuesto bajo el soportal, el mismo lugar donde Helena ha acomodado a Telémaco--- y, una vez que ha cumplido con su deber, Alcínoo y Arete hacen exactamente lo mismo que Helena y Menelao.}{Terminada la conversación, Arete en persona se ocupa de acomodar a Odiseo ---por supuesto bajo el soportal, el mismo lugar donde Helena \camb{había acomodado} a Telémaco--- y, una vez que ha cumplido con su deber, Alcínoo y Arete hacen exactamente lo mismo que Helena y Menelao.}
+
+\propuesta{Repetición de una idea}{src/odisea6_esqueria.tex}{línea 233}{El capítulo de Helena ya ha formulado la observación de que los aqueos son muy llorones. Aquí el recordatorio entre rayas no añade información a la escena.}{Odiseo, al oírlo, no puede contener el llanto ---ya hemos dicho que los aqueos son muy llorones---:}{Odiseo, al oírlo, no puede contener el llanto\camb{:}}
+
+\section{La Gran Guerra}
+
+\propuesta{Repetición léxica}{src/odisea6_laguerra.tex}{línea 3}{\emph{Todavía} aparece dos veces en la misma enumeración descriptiva.}{Imagínatelo sentado junto al fuego, enjuto, su antigua corpulencia convertida en tendón y nervio, los ojos todavía feroces a pesar del temblor en las manos y el andar encorvado, la mente todavía lúcida, quizás más lúcida que nunca.}{Imagínatelo sentado junto al fuego, enjuto, su antigua corpulencia convertida en tendón y nervio, los ojos todavía feroces a pesar del temblor en las manos y el andar encorvado, la mente \camb{aún} lúcida, quizás más lúcida que nunca.}
+
+\propuesta{Repetición léxica}{src/odisea6_laguerra.tex}{línea 25}{\emph{El juramento} se repite en la misma oración.}{Odiseo recuerda el juramento que los príncipes aqueos habían hecho y que les obligaba a defenderse los unos a los otros, el juramento que invoca Agamenón para convocarlos:}{Odiseo recuerda el juramento que los príncipes aqueos habían hecho y que les obligaba a defenderse los unos a los otros, \camb{el que} invoca Agamenón para convocarlos:}
+
+\propuesta{Repetición de una idea}{src/odisea6_laguerra.tex}{líneas 3 y 47}{El arranque ya presenta la mente del anciano como lúcida, incluso «más lúcida que nunca». La frase introductoria al segundo poema vuelve a afirmar lo mismo.}{Viejo y amargado, Ulises no ha perdido la lucidez ni la capacidad de reírse de sí mismo.}{Viejo y amargado, Ulises \camb{no ha perdido la capacidad de reírse de sí mismo}.}
+
+\propuesta{Locución}{src/odisea6_laguerra.tex}{línea 67}{La expresión asentada es \emph{todo músculo}, en singular.}{todo músculos y sin ningún ingenio. Pero, si eras tan inteligente,}{\camb{todo músculo} y sin ningún ingenio. Pero, si eras tan inteligente,}
+
+\propuesta{Orden sintáctico}{src/odisea6_laguerra.tex}{líneas 75--77}{El sujeto \emph{Aquiles} queda pospuesto de forma que parece complemento de \emph{opción}.}{Quizás se debatiese si era una mejor opción\\
+Aquiles, pero la verdad es que un gran héroe\\
+no es tan buena inversión como un rey poderoso.}{Quizás se debatiese \camb{si Aquiles era una opción mejor},\\
+pero la verdad es que un gran héroe\\
+no es tan buena inversión como un rey poderoso.}
+
+\propuesta{Repetición léxica}{src/odisea6_laguerra.tex}{líneas 204--209}{\emph{Los demás} aparece dos veces en líneas consecutivas.}{El semidiós debía cumplir su destino\\
+y quedó tan abandonado como todos los demás en las costas de Ilión,\\
+pero, a diferencia de los demás, no estaba interesado en el futuro.}{El semidiós debía cumplir su destino\\
+y quedó tan abandonado como todos los demás en las costas de Ilión,\\
+pero, a diferencia \camb{del resto}, no estaba interesado en el futuro.}
+
+\propuesta{Régimen verbal}{src/odisea6_laguerra.tex}{líneas 240--241}{\emph{Salirse con la suya} no rige normalmente un complemento introducido por \emph{en} con este sentido.}{Tal vez sí, pero el orgullo y la lujuria\\
+siempre se han salido con la suya en hombres poderosos.}{Tal vez sí, pero el orgullo y la lujuria\\
+siempre \camb{se han impuesto en los hombres poderosos}.}
+
+\section{Séptima parte: Cíclope}
+
+\propuesta{Puntuación explicativa}{src/odisea7_ciclope.tex}{línea 243}{\emph{Y otro detalle} introduce una explicación completa; los dos miembros no deben unirse solo con coma.}{Y otro detalle, Néstor pregunta quiénes son a sus invitados después de darles de comer, es decir, después de haberles demostrado hospitalidad.}{Y otro detalle\camb{:} Néstor pregunta quiénes son a sus invitados después de darles de comer, es decir, después de haberles demostrado hospitalidad.}
+
+\propuesta{Repetición léxica}{src/odisea7_ciclope.tex}{líneas 284--287}{\emph{Ejemplo} aparece cinco veces en dos párrafos próximos. La propuesta conserva el razonamiento y reduce dos apariciones.}{El amigo Christopher se pasa toda su película obsesionado con el desastre que supone violar la \emph{xenía}, pero el único ejemplo sustancial que nos da ---la treta del caballo--- resulta, como hemos visto, bastante endeble. [...] Y nuestro admirado director, con la misma poca fortuna con que prescinde del ejemplo más vivo de hospitalidad en la \emph{Odisea}, ignora el mejor ejemplo en el que esta se viola de manera racional y consciente.}{El amigo Christopher se pasa toda su película obsesionado con el desastre que supone violar la \emph{xenía}, pero el único \camb{caso} sustancial que nos da ---la treta del caballo--- resulta, como hemos visto, bastante endeble. [...] Y nuestro admirado director, con la misma poca fortuna con que prescinde de \camb{la encarnación más viva} de la hospitalidad en la \emph{Odisea}, ignora el mejor ejemplo en el que esta se viola de manera racional y consciente.}
+
+\propuesta{Nombre equivocado}{src/odisea7_ciclope.tex}{línea 287}{La contraposición es entre el Polifemo de Nolan y el de Homero. \emph{El Polifemo de Odiseo} designaría, en cambio, el relato interno del propio héroe.}{El problema del cíclope de Nolan es que es un pobre hombre, un simple, que se zampa a los aqueos como quien se merienda sardinas, sin darle, aparentemente, importancia al hecho, mientras que el Polifemo de Odiseo es artero, cruel, arrogante... Y astuto.}{El problema del cíclope de Nolan es que es un pobre hombre, un simple, que se zampa a los aqueos como quien se merienda sardinas, sin darle, aparentemente, importancia al hecho, mientras que el Polifemo de \camb{Homero} es artero, cruel, arrogante... Y astuto.}
+
+\propuesta{Puntuación}{src/odisea7_ciclope.tex}{línea 320}{La prótasis condicional debe separarse de la oración principal.}{Ulises piensa en matarlo y se da cuenta de que si lo hace quedan atrapados en la cueva, ya que no tienen forma de mover el enorme peñasco.}{Ulises piensa en matarlo y se da cuenta de que si lo hace\camb{,} quedan atrapados en la cueva, ya que no tienen forma de mover el enorme peñasco.}
+
+\propuesta{Construcción verbal}{src/odisea7_ciclope.tex}{línea 385}{\emph{Garantizando que lo deja} mezcla el resultado ya producido con una subordinada que aquí pide otra construcción.}{En el original, Ulises lo emborracha primero, garantizando que lo deja fuera de juego y puede maniobrar a sus anchas.}{En el original, Ulises lo emborracha primero, \camb{asegurándose de dejarlo} fuera de juego y poder maniobrar a sus anchas.}
+
+\propuesta{Puntuación de locución}{src/odisea7_ciclope.tex}{línea 409}{La locución explicativa \emph{o sea} debe ir seguida de coma.}{o sea Nadie, Ninguno.}{o sea\camb{,} Nadie, Ninguno.}
+
+\propuesta{Repetición léxica}{src/odisea7_ciclope.tex}{línea 519}{\emph{Pedirle}/\emph{pedirles} aparece en la misma frase y entorpece la comparación.}{Polifemo no podía pedirle a Poseidón ---que presumiblemente no estaba mirando en ese momento--- venganza contra Nadie, como no pudo pedirles a los cíclopes ayuda cuando Ninguno lo mataba con artería y no con fuerza.}{Polifemo no podía pedirle a Poseidón ---que presumiblemente no estaba mirando en ese momento--- venganza contra Nadie, como tampoco pudo \camb{solicitar ayuda a} los cíclopes cuando Ninguno lo mataba con artería y no con fuerza.}
+
+\propuesta{Puntuación de diálogo}{src/odisea7_ciclope.tex}{líneas 526--529}{\emph{Gritan} es una acotación del narrador y debe distinguirse de las palabras de los nietos.}{¡Polifemo! Gritan. Por favor, cuéntanos, abuelo,\\
+cómo derrotaste al monstruo.}{¡Polifemo! \camb{---gritan---.} Por favor, cuéntanos, abuelo,\\
+cómo derrotaste al monstruo.}
+
+\propuesta{Verbo impropio}{src/odisea7_ciclope.tex}{línea 568}{Un relato no suele \emph{argumentar} un dato; lo afirma, sostiene o alega.}{Claro, tu relato argumenta que necesitabas comida y agua,}{Claro, tu relato \camb{afirma} que necesitabas comida y agua,}
+
+\propuesta{Puntuación de diálogo}{src/odisea7_ciclope.tex}{líneas 589--591}{Las preguntas y respuestas reproducidas necesitan marcas que permitan atribuir cada voz sin ambigüedad.}{Esa parte de la historia es cierta, al menos.\\
+Los otros llamaron: ¿Quién te ha cegado? Y el pobre Polifemo gritó.\\
+Nadie lo hizo.}{Esa parte de la historia es cierta, al menos.\\
+Los otros llamaron: \camb{«¿Quién te ha cegado?».} Y el pobre Polifemo gritó\camb{:}\\
+\camb{«Nadie lo hizo».}}
+
+\section{Eolo: La bolsa de los vientos}
+
+\propuesta{Redundancia}{src/odisea8_eolo.tex}{línea 138}{\emph{Anuncia} y \emph{presagio} expresan dos veces la misma relación.}{Lo que Odiseo cuenta entonces a los feacios anuncia ya un oscuro presagio.}{Lo que Odiseo cuenta entonces a los feacios \camb{constituye ya} un oscuro presagio.}
+
+\section{Octava parte: Circe}
+
+\propuesta{Régimen verbal}{src/odisea8_circe.tex}{línea 21}{\emph{Animar} lleva complemento directo; la reescritura evita el leísmo plural.}{Al día siguiente les anima a que vayan a explorar, pero la tripulación, después de habérselas visto con cíclopes y lestrigones, no está para muchas aventuras.}{Al día siguiente \camb{los anima a ir} a explorar, pero la tripulación, después de habérselas visto con cíclopes y lestrigones, no está para muchas aventuras.}
+
+\propuesta{Ambigüedad sintáctica}{src/odisea8_circe.tex}{línea 95}{\emph{Le pide quedarse} puede significar que Euríloco pide a Odiseo que se quede.}{Ulises se dispone a explorar y le pide a su lugarteniente que le acompañe, pero este, muerto de miedo, le pide quedarse.}{Ulises se dispone a explorar y le pide a su lugarteniente que le acompañe, pero este, muerto de miedo, \camb{le pide que lo deje quedarse}.}
+
+\propuesta{Repetición de una idea}{src/odisea8_circe.tex}{línea 291}{La primera oración resume lo que la cita inmediata vuelve a decir casi con las mismas palabras.}{Circe manda a su amante a hablar con Tiresias en el Hades, ese sitio horrible donde iban las almas de los mortales para convertirse en sombras sin entendimiento. Los versos son espeluznantes: «solo a este ciego agorero, / cuando murió, le mantuvo Perséfone su entendimiento / y lucidez, en un mundo de sombras en revoloteo».}{La \camb{justificación de Circe es espeluznante}: «solo a este ciego agorero, / cuando murió, le mantuvo Perséfone su entendimiento / y lucidez, en un mundo de sombras en revoloteo».}
+
+\propuesta{Repetición y concordancia temporal}{src/odisea8_circe.tex}{líneas 472--476}{\emph{Lamentaba}/\emph{se lamentó}/\emph{se lamentó} se acumula y alterna imperfecto con perfecto.}{Y la canción también lamentaba a Eurídice,\\
+que no pudo ser rescatada del Inframundo,\\
+y se lamentó por la esposa de Héctor, esclavizada,\\
+y se lamentó por todas esas otras mujeres que fueron tomadas,\\
+por carniceros como tú.}{Y la canción también lamentaba a Eurídice,\\
+que no pudo ser rescatada del Inframundo,\\
+\camb{a la esposa de Héctor, esclavizada,}\\
+\camb{y a todas esas otras mujeres que fueron tomadas}\\
+por carniceros como tú.}
+
+\propuesta{Puntuación de discurso directo}{src/odisea8_circe.tex}{líneas 492--496}{\emph{Su voz dijo} introduce palabras literales, que conviene marcar con dos puntos y comillas.}{y un ofrecimiento de perdón. Su voz dijo\\
+monstruo o no, eres solo un hombre, y todos los hombres,
+
+lo merezcan o no,\\
+pueden ser redimidos.}{y un ofrecimiento de perdón. Su voz dijo\camb{:}\\
+\camb{«Monstruo} o no, eres solo un hombre, y todos los hombres,
+
+lo merezcan o no,\\
+pueden ser redimidos\camb{».}}
+
+\section{Novena parte: Hades}
+
+\propuesta{Repetición léxica}{src/odisea9_hades.tex}{línea 94}{\emph{Compasión} aparece dos veces en la misma transición.}{La escena nos reconcilia con el héroe milmañas, quizás por ser la primera vez que le vemos demostrando compasión, sufriendo genuinamente por el destino aciago de un pobre inocente. Pero a Odiseo aún le queda mucho sufrimiento por delante. La siguiente sombra en aparecer es su madre. Casi inmediatamente, Homero nos muestra que, compasión o no, Ulises es más duro de pelar que el bronce que esgrime:}{La escena nos reconcilia con el héroe milmañas, quizás por ser la primera vez que le vemos demostrando compasión, sufriendo genuinamente por el destino aciago de un pobre inocente. Pero a Odiseo aún le queda mucho sufrimiento por delante. La siguiente sombra en aparecer es su madre. Casi inmediatamente, Homero nos muestra que, \camb{piadoso o no}, Ulises es más duro de pelar que el bronce que esgrime:}
+
+\propuesta{Repetición léxica}{src/odisea9_hades.tex}{línea 131}{\emph{Le va a cobrar caro} se repite en dos frases consecutivas.}{Poseidón territodatremante le va a cobrar caro que cegara a su hijo. O para ser precisos, le va a cobrar caro que fuera tan idiota como para identificarse después de hacerlo.}{Poseidón territodatremante le va a cobrar caro que cegara a su hijo. O\camb{,} para ser precisos, \camb{castigará que} fuera tan idiota como para identificarse después de hacerlo.}
+
+\propuesta{Repetición léxica}{src/odisea9_hades.tex}{línea 192}{\emph{Viaje} aparece tres veces en un tramo breve, dos de ellas en la misma oración.}{El viaje del héroe no termina en Ítaca, ya que está obligado a realizar un último viaje.}{El viaje del héroe no termina en Ítaca, ya que está obligado a realizar una última \camb{travesía}.}
+
+\propuesta{Repetición de raíz}{src/odisea9_hades.tex}{línea 210}{\emph{Desgarrador} y \emph{desgarradores} se suceden de forma muy visible.}{Ulises intenta abrazarla en vano, un pasaje todavía más desgarrador que todos los desgarradores versos que ofrece el canto más triste de la \emph{Odisea} y puede que de toda la literatura, hasta que Primo Levi escribiera \emph{Si esto es un hombre}:}{Ulises intenta abrazarla en vano, un pasaje todavía más desgarrador \camb{que cuantos ofrece} el canto más triste de la \emph{Odisea} y puede que de toda la literatura, hasta que Primo Levi escribiera \emph{Si esto es un hombre}:}
+
+\propuesta{Repetición léxica}{src/odisea9_hades.tex}{línea 310}{\emph{Le regala} aparece dos veces en la misma oración.}{Áyax le regala a Héctor un cinturón ---que luego usará Aquiles para arrastrarlo con su carro alrededor de las murallas de Ilión--- y el troyano le regala al gigante argivo su espada, que sirve para que este se suicide.}{Áyax le regala a Héctor un cinturón ---que luego usará Aquiles para arrastrarlo con su carro alrededor de las murallas de Ilión--- y el troyano \camb{entrega} al gigante argivo su espada, que sirve para que este se suicide.}
+
+\section{Décima parte: Agamenón y Clitemnestra}
+
+\propuesta{Verbo impropio}{src/odisea10_agamenon.tex}{línea 5}{\emph{Escabechina} es sustantivo; el verbo correspondiente es \emph{escabechar}.}{En la \emph{Odisea}, es Egisto ---no Clitemnestra--- quien lo mata, tendiéndole una emboscada en la que escabechina también a muchos de sus hombres.}{En la \emph{Odisea}, es Egisto ---no Clitemnestra--- quien lo mata, tendiéndole una emboscada en la que \camb{escabecha} también a muchos de sus hombres.}
+
+\propuesta{Redundancia}{src/odisea10_agamenon.tex}{línea 33}{\emph{Volver a repetirse} contiene dos veces la noción de repetición.}{La fórmula, de hecho, vuelve a repetirse en la segunda incursión que el lector hace a los infiernos, siguiendo las almas de los pretendientes, en el último canto de la épica.}{La fórmula, de hecho, \camb{se repite} en la segunda incursión que el lector hace a los infiernos, siguiendo las almas de los pretendientes, en el último canto de la épica.}
+
+\propuesta{Redundancia}{src/odisea10_agamenon.tex}{línea 75}{\emph{Ya} y \emph{anteriormente} expresan la misma anterioridad.}{El perro homérico es el animal sin vergüenza que te mira directamente a los ojos y, por tanto, la traducción más exacta del epíteto, como ya comentamos anteriormente, es «descarada».}{El perro homérico es el animal sin vergüenza que te mira directamente a los ojos y, por tanto, la traducción más exacta del epíteto, como \camb{ya comentamos}, es «descarada».}
+
+\propuesta{Repetición léxica}{src/odisea10_agamenon.tex}{línea 109}{\emph{También} aparece tres veces en un tramo muy corto.}{También le confirma que, en asunto de mujeres, Odiseo tiene suerte. Aunque lleva un año pasándoselo estupendamente con Circe, Penélope lo espera en casa y también le espera su hijo. Agamenón, que cae poco simpático, también se lamenta de no haber podido ver al suyo y es casi el único momento en el que nos compadecemos de él.}{También le confirma que, en asunto de mujeres, Odiseo tiene suerte. Aunque lleva un año pasándoselo estupendamente con Circe, Penélope lo espera en casa y \camb{allí lo espera también} su hijo. Agamenón, que cae poco simpático, \camb{se lamenta a su vez} de no haber podido ver al suyo y es casi el único momento en el que nos compadecemos de él.}
+
+\propuesta{Repetición y antecedente ambiguo}{src/odisea10_agamenon.tex}{línea 134}{\emph{Versión} se repite y la última aparición puede referirse tanto a Nolan como al poema propio.}{De hecho, en mi \emph{Abandonando Ítaca}, también prefiero la versión de Nolan a la de la \emph{Odisea}. Una versión en la que, por cierto, el amigo Odiseo no sale muy bien parado.}{De hecho, en mi \emph{Abandonando Ítaca} también prefiero la versión de Nolan a la de la \emph{Odisea}. \camb{En mi relato}, por cierto, el amigo Odiseo no sale muy bien parado.}
+
+\propuesta{Régimen verbal}{src/odisea10_agamenon.tex}{líneas 148--150}{Se culpa \emph{a alguien de algo}; \emph{culpar algo por} es un calco del inglés.}{Ese idiota de Calchas,\\
+culpando al capricho de los dioses por la calma chicha,\\
+pidiendo un sacrificio de sangre.}{Ese idiota de Calchas,\\
+\camb{culpando a los dioses de la calma chicha},\\
+pidiendo un sacrificio de sangre.}
+
+\propuesta{Repetición de raíz}{src/odisea10_agamenon.tex}{líneas 150--153}{\emph{Sacrificio}/\emph{sacrificio}/\emph{sacrificada} se concentra en cuatro versos.}{pidiendo un sacrificio de sangre.\\
+No cualquier sacrificio,\\
+sino que nada menos que Ifigenia, la hija de Agamenón,\\
+tenía que ser sacrificada para complacer a las deidades.}{pidiendo un sacrificio de sangre.\\
+\camb{No una víctima cualquiera},\\
+sino que nada menos que Ifigenia, la hija de Agamenón,\\
+tenía que ser sacrificada para complacer a las deidades.}
+
+\propuesta{Repetición léxica}{src/odisea10_agamenon.tex}{líneas 163--166}{\emph{Los dioses} aparece al final de un verso y vuelve a abrir el siguiente.}{Tal vez Calchas tenía sus propias cuentas pendientes,\\
+quizás los dioses estaban realmente aburridos y querían algo de diversión.\\
+Salvo que los dioses ---tu vejez lo ha revelado---,\\
+solo existen en la imaginación de los hombres,}{Tal vez Calchas tenía sus propias cuentas pendientes,\\
+quizás \camb{los inmortales} estaban realmente aburridos y querían algo de diversión.\\
+Salvo que los dioses ---tu vejez lo ha revelado---,\\
+solo existen en la imaginación de los hombres,}
+
+\propuesta{Repetición léxica}{src/odisea10_agamenon.tex}{líneas 185--188}{\emph{Caras}/\emph{cara} se repite de inmediato; además, el poema enumera luego una segunda y una tercera.}{Ahora recuerdas las caras de Ifigenia,\\
+la cara que viste cuando irrumpió en la sala,\\
+preguntando por su amado padre, creyendo aún}{Ahora recuerdas las caras de Ifigenia\camb{.}\\
+\camb{La primera, cuando} irrumpió en la sala,\\
+preguntando por su amado padre, creyendo aún}
+
+\section{Undécima parte: Sirenas}
+
+\propuesta{Concordancia temporal}{src/odisea11_sirenas.tex}{líneas 184--186}{La serie arranca en condicional y pasa sin motivo al imperfecto.}{Podría ser por la muerte de Héctor, o la muerte de Aquiles,\\
+podía recordar las naves perdidas o invocar las llamas que incendiaban Troya,\\
+lamentar el destino de Patroclo o añorar la belleza de Helena,}{\camb{Podía} ser por la muerte de Héctor, o la muerte de Aquiles,\\
+podía recordar las naves perdidas o invocar las llamas que incendiaban Troya,\\
+lamentar el destino de Patroclo o añorar la belleza de Helena,}
+
+\propuesta{Construcción enfática}{src/odisea11_sirenas.tex}{línea 191}{La construcción \emph{es de... de lo que} duplica la preposición.}{Y es, justamente, de ese sentido de lo sagrado de lo que se alimentan las sirenas:}{Y es justamente de ese sentido de lo sagrado \camb{del que} se alimentan las sirenas:}
+
+\propuesta{Puntuación}{src/odisea11_sirenas.tex}{líneas 194--197}{La segunda oración explica la primera y no debe quedar unida a ella solo por coma.}{Quizás esto es lo que hizo que las sirenas\\
+fuesen tan temibles y tan peligrosas,\\
+cantaban simplemente canciones de los hombres\\
+con acordes más puros.}{Quizás esto es lo que hizo que las sirenas\\
+fuesen tan temibles y tan peligrosas\camb{:}\\
+cantaban simplemente canciones de los hombres\\
+con acordes más puros.}
+
+\section{Duodécima parte: La matanza de los pretendientes}
+
+\propuesta{Régimen de participio}{src/odisea12_pretendientes.tex}{línea 5}{Con valor de orden temporal, la forma asentada es \emph{seguido de}; \emph{seguido por} introduce normalmente al agente que sigue.}{Un solo vocablo para nombrar el asesinato a sangre fría de ciento ocho jóvenes, seguido por una implacable ejecución.}{Un solo vocablo para nombrar el asesinato a sangre fría de ciento ocho jóvenes, seguido \camb{de} una implacable ejecución.}
+
+\propuesta{Repetición de una idea}{src/odisea12_pretendientes.tex}{líneas 63 y 77}{La condición de adivino de Leodes se explica en la línea 63 y vuelve a presentarse catorce líneas después como algo ya dicho. Puede enlazarse sin repetir el acto de explicación.}{Ya hemos dicho que Leodes tiene dotes de adivino, así que más les habría valido a los pretendientes hacerle caso cuando dice:}{\camb{Como Leodes tiene dotes de adivino}, más les habría valido a los pretendientes hacerle caso cuando dice:}
+
+\propuesta{Repetición léxica}{src/odisea12_pretendientes.tex}{línea 122}{\emph{Detalle} aparece dos veces en el mismo párrafo.}{El detalle no tiene desperdicio. [...] Cuando todos están bastante borrachos ---un detalle importante, ya que es más fácil abatir al enemigo si está ebrio, sin olvidar que el héroe ya ha aplicado ese truco con el cíclope---, Odiseo pone en marcha su treta:}{El detalle no tiene desperdicio. [...] Cuando todos están bastante borrachos ---una \camb{circunstancia} importante, ya que es más fácil abatir al enemigo si está ebrio, sin olvidar que el héroe ya ha aplicado ese truco con el cíclope---, Odiseo pone en marcha su treta:}
+
+\propuesta{Repetición léxica}{src/odisea12_pretendientes.tex}{línea 188}{\emph{Importante}/\emph{importa} y \emph{también} se acumulan en la explicación.}{Y esto es importante porque su intervención favorece los planes de Ulises sin ella saberlo y también lo es porque muestra su generosidad y, sobre todo, \emph{su agencia}.}{\camb{Esto importa} porque su intervención favorece los planes de Ulises sin ella saberlo. \camb{Además, muestra} su generosidad y, sobre todo, \emph{su agencia}.}
+
+\propuesta{Construcción recargada}{src/odisea12_pretendientes.tex}{línea 418}{La frase acumula \emph{una escena}, \emph{en la secuencia} y \emph{en Nolan}.}{Hay una escena en la secuencia de la matanza, en Nolan, que da casi risa.}{Hay una escena \camb{de la matanza de Nolan} que da casi risa.}
+
+\propuesta{Régimen verbal}{src/odisea12_pretendientes.tex}{línea 446}{\emph{Mandar a alguien para que haga} resulta menos preciso que la construcción directa con \emph{que}.}{Cuando Melantio se dirige al almacén para seguir trayendo armas, Ulises manda a Eumeo y Filetio para que lo intercepten.}{Cuando Melantio se dirige al almacén para seguir trayendo armas, Ulises manda a Eumeo y Filetio \camb{que lo intercepten}.}
+
+\propuesta{Verbo impropio}{src/odisea12_pretendientes.tex}{línea 534}{Una interpretación no \emph{circula en} una obra; aquí la idea la recorre o está presente en ella.}{Es una interpretación que circula, como hemos visto, en toda la \emph{Odisea} y, en general, en toda la épica griega.}{Es una interpretación que \camb{recorre}, como hemos visto, toda la \emph{Odisea} y, en general, toda la épica griega.}
+
+\propuesta{Repetición léxica}{src/odisea12_pretendientes.tex}{línea 544}{\emph{Quizás} aparece tres veces en tres oraciones consecutivas. La incertidumbre se conserva con una sola alternancia.}{A la inversa, quizás los humanos también «echan la culpa» a los olímpicos cuando la suerte les favorece. Así que quizás no hace falta recurrir a la diosa ojiglauca para frenar las lanzas. Quizás, simplemente, Odiseo es un tipo afortunado, como se dirá a sí mismo, años más tarde, viejo y desengañado en Ítaca:}{A la inversa, quizás los humanos también «echan la culpa» a los olímpicos cuando la suerte les favorece. \camb{Por tanto, puede que no haga falta} recurrir a la diosa ojiglauca para frenar las lanzas. \camb{Tal vez}, simplemente, Odiseo es un tipo afortunado, como se dirá a sí mismo, años más tarde, viejo y desengañado en Ítaca:}
+
+\section{Decimotercera parte: El asesinato de las niñas}
+
+\propuesta{Relativo temporal}{src/odisea13_ninas.tex}{línea 3}{En registro cuidado, un antecedente temporal explícito pide \emph{el día en que}.}{Recuerdo como si fuera ayer el día que terminé el canto XXII.}{Recuerdo como si fuera ayer el día \camb{en que} terminé el canto XXII.}
+
+\propuesta{Repetición léxica}{src/odisea13_ninas.tex}{línea 65}{\emph{Es decir} aparece dos veces en tres frases consecutivas.}{Es decir, nada de matarlas a espada como han hecho con los pretendientes. Después de todo, estos eran nobles y varones, es decir, se merecían un pasaje en primera al Hades.}{Es decir, nada de matarlas a espada como han hecho con los pretendientes. Después de todo, estos eran nobles y varones\camb{:} se merecían un pasaje en primera al Hades.}
+
+\propuesta{Falta de antecedente}{src/odisea13_ninas.tex}{líneas 140--145}{El pasaje comentado que presentaba a Pentesilea ya no forma parte del capítulo. Por eso \emph{la reina de las amazonas} aparece aquí sin nombre ni presentación.}{Pero no todos se engañan:
+
+En cambio, ni Héctor ni la reina de las amazonas\\
+esperaban derrotar al guerrero invulnerable}{Pero no todos se engañan\camb{. Pentesilea, reina de las amazonas, tampoco:}
+
+En cambio, ni Héctor ni la reina de las amazonas\\
+esperaban derrotar al guerrero invulnerable}
+
+\propuesta{Posesivo innecesario}{src/odisea13_ninas.tex}{línea 170}{En español se sacude \emph{la cabeza}, no normalmente \emph{sus cabezas}; el posesivo parece un calco del inglés.}{Amigos y sirvientes por igual\\
+sacudirían sus cabezas y pensarían en un viejo que ha perdido el sentido.}{Amigos y sirvientes por igual\\
+sacudirían \camb{la cabeza} y pensarían en un viejo que ha perdido el sentido.}
+
+\section{Decimocuarta parte: Penélope}
+
+\propuesta{Construcción disyuntiva}{src/odisea14_penelope.tex}{línea 112}{Los dos términos de la interrogación indirecta no comparten la misma estructura: \emph{si es... el que ha vuelto o se trata...}.}{Penélope sigue en sus trece y dispone de recursos para averiguar, en privado, si es de verdad su marido el que ha vuelto o se trata de un divinal impostor.}{Penélope sigue en sus trece y dispone de recursos para averiguar, en privado, \camb{si quien ha vuelto es de verdad su marido o un divinal impostor}.}
+
+\propuesta{Construcción incompleta}{src/odisea14_penelope.tex}{línea 286}{\emph{O quizás más difícil} necesita un núcleo comparativo antes de introducir la segunda obligación.}{Ulises le hará a su esposa el relato de sus aventuras y ella tendrá que fingir que no le importan el año con Circe ni los siete años con Calipso. O quizás más difícil, tendrá que aprender a convivir con un extraño.}{Ulises le hará a su esposa el relato de sus aventuras y ella tendrá que fingir que no le importan el año con Circe ni los siete años con Calipso. O, \camb{lo que quizás sea más difícil}, tendrá que aprender a convivir con un extraño.}
+
+\section{Decimoquinta parte: Homero}
+
+\propuesta{Formación impropia con prefijo}{src/odisea15_homero.tex}{línea 5}{\emph{Ex-alegre} no es una formación normativa: \emph{ex-} se une a sustantivos o adjetivos sustantivados que designan una condición anterior.}{No es que Homero se interese mucho por la ex-alegre pandilla de gorrones.}{No es que Homero se interese mucho por la \camb{antaño alegre} pandilla de gorrones.}
+
+\propuesta{Puntuación del poema}{src/odisea15_homero.tex}{líneas 20--23}{Las comas separan \emph{tanto} de su consecutiva, \emph{costumbre} de su complemento y \emph{antes} del complemento que lo precisa.}{A papá le preocupaba que aprendiera a conducir,\\
+le preocupaba tanto, que tomamos la costumbre,\\
+de hacer prácticas, mucho antes,\\
+de tener la edad para sacarme el carnet.}{A papá le preocupaba que aprendiera a conducir,\\
+le preocupaba tanto\camb{ que} tomamos la costumbre\\
+de hacer prácticas mucho antes\\
+de tener la edad para sacarme el carnet.}
+
+\propuesta{Puntuación del poema}{src/odisea15_homero.tex}{líneas 35--41}{Una coma separa sujeto y verbo en \emph{lo suyo era}; otra deja aislado el complemento de \emph{tenía}. La unión de dos oraciones completas con coma puede aclararse con punto.}{Parábamos en pequeños cafés,\\
+donde charlábamos largamente, después de todo,\\
+éramos socios al volante y lo suyo,\\
+era intercambiar historias.
+
+Y mi padre tenía,\\
+tantas historias que contarme.}{Parábamos en pequeños cafés,\\
+donde charlábamos largamente\camb{.} Después de todo,\\
+éramos socios al volante y lo suyo\\
+era intercambiar historias.
+
+Y mi padre tenía\\
+tantas historias que contarme.}
+
+\propuesta{Puntuación del poema}{src/odisea15_homero.tex}{líneas 43--54}{Varias comas separan el verbo de sus complementos.}{Cuando saqué el carnet siguió insistiendo,\\
+en que practicar era imprescindible,\\
+declarándose todavía francamente inquieto,\\
+con mi obvia falta de reflejos.
+
+Era una extraña obsesión, de hecho,\\
+yo había sacado el carnet a la primera,\\
+y después de tanta práctica, sabía muy bien\\
+que me sobraba habilidad. No importaba,
+
+papá declaró que todavía eran necesarias,\\
+veinte mil leguas de viaje.}{Cuando saqué el carnet siguió insistiendo\\
+en que practicar era imprescindible,\\
+declarándose todavía francamente inquieto\\
+con mi obvia falta de reflejos.
+
+Era una extraña obsesión\camb{.} De hecho,\\
+yo había sacado el carnet a la primera\\
+y\camb{,} después de tanta práctica, sabía muy bien\\
+que me sobraba habilidad. No importaba\camb{:}
+
+papá declaró que todavía eran necesarias\\
+veinte mil leguas de viaje.}
+
+\propuesta{Puntuación del poema}{src/odisea15_homero.tex}{líneas 56--77}{Se acumulan comas entre verbo y complemento, sujeto y verbo, y preposición y término. En \emph{Ayer, pasé} la coma separa un adverbio breve del verbo.}{Así que las hicimos. Viajábamos a veces,\\
+al pueblo veraniego, pernoctábamos,\\
+en la casita que teníamos allí,\\
+antes de volver a casa al día siguiente.
+
+Papá cancelaba sus clases,\\
+anulaba compromisos, se saltaba citas,\\
+todo fuera por enseñarme,\\
+a conducir, decía, como Dios manda.
+
+Y mamá, de repente,\\
+parecía igualmente preocupada,\\
+y declaraba que aquellas excursiones,\\
+eran absolutamente necesarias.
+
+Ayer, pasé el día junto a mi hijo,\\
+en otro largo viaje, conduce tan bien\\
+como solía hacerlo yo, y aun así,\\
+prolongaría ese viaje hasta Finisterre.
+
+Viajaría con él veinte mil leguas, hasta llegar,\\
+al final del Arco Iris, donde papá nos espera.}{Así que las hicimos. Viajábamos a veces\\
+al pueblo veraniego\camb{ y} pernoctábamos\\
+en la casita que teníamos allí\\
+antes de volver a casa al día siguiente.
+
+Papá cancelaba sus clases,\\
+anulaba compromisos, se saltaba citas,\\
+todo fuera por enseñarme\\
+a conducir, decía, como Dios manda.
+
+Y mamá, de repente,\\
+parecía igualmente preocupada\\
+y declaraba que aquellas excursiones\\
+eran absolutamente necesarias.
+
+Ayer pasé el día junto a mi hijo\\
+en otro largo viaje\camb{.} Conduce tan bien\\
+como solía hacerlo yo, y aun así,\\
+prolongaría ese viaje hasta Finisterre.
+
+Viajaría con él veinte mil leguas, hasta llegar\\
+al final del Arco Iris, donde papá nos espera.}
+
+\propuesta{Repetición léxica}{src/odisea15_homero.tex}{línea 82}{\emph{Darte} aparece dos veces dentro del mismo inciso.}{Quizás sea un prejuicio mío ---el sesgo emocional que produce darte cuenta de que tu padre ha cancelado una reunión importante para darte una clase de conducir que no necesitas--- lo que me deja frío frente a unos versos formalmente magníficos pero tan formales que uno no acaba de ver el sentimiento:}{Quizás sea un prejuicio mío ---el sesgo emocional que produce \camb{descubrir} que tu padre ha cancelado una reunión importante para darte una clase de conducir que no necesitas--- lo que me deja frío frente a unos versos formalmente magníficos pero tan formales que uno no acaba de ver el sentimiento:}
+
+\propuesta{Redundancia}{src/odisea15_homero.tex}{línea 195}{\emph{Tiene cien años} ya expresa la antigüedad.}{La noción de que ambos poemas épicos se derivan de una amplia ---y muy antigua--- tradición oral tiene ya cien años de antigüedad.}{La noción de que ambos poemas épicos se derivan de una amplia ---y muy antigua--- tradición oral \camb{tiene ya cien años}.}
+
+\propuesta{Repetición léxica}{src/odisea15_homero.tex}{línea 205}{\emph{Fórmulas} aparece cuatro veces en un párrafo. La propuesta reserva el término para la definición de Parry y para la serie final.}{Todo un armazón de trucos nemotécnicos y fórmulas prefabricadas disponible para que el bardo pueda memorizar e improvisar. De hecho, Parry llamó a estos patrones fijos, precisamente, «fórmulas». Ya hemos visto algunas, ahí van algunas más:}{Todo un armazón de trucos nemotécnicos y \camb{expresiones} prefabricadas disponible para que el bardo pueda memorizar e improvisar. De hecho, Parry llamó a estos patrones fijos, precisamente, «fórmulas». Ya hemos visto algunas\camb{; ahí van otras}:}
+
+\propuesta{Repetición léxica}{src/odisea15_homero.tex}{línea 233}{\emph{Varios} se repite en la misma frase.}{El aparente batiburrillo de estilos y capas dialectales, que sugería que el poema había sido compuesto por varios bardos desparramados en varias épocas.}{El aparente batiburrillo de estilos y capas dialectales, que sugería que el poema había sido compuesto por varios bardos desparramados en \camb{distintas} épocas.}
+
+\section{Vigésima parte: Marcharse de Ítaca}
+
+\propuesta{Repetición léxica}{src/odisea_marcharse_de_itaca.tex}{línea 5}{\emph{Acabábamos}/\emph{acababa} abre dos frases consecutivas.}{Acabábamos de cumplir los dieciséis años. Acababa de marcharme de Alba, donde había llegado a los diez, justo cuando parecía que el pueblo empezaba a aceptarme.}{Acabábamos de cumplir los dieciséis años. \camb{Me había marchado} de Alba, donde había llegado a los diez, justo cuando parecía que el pueblo empezaba a aceptarme.}
+
+\propuesta{Topónimo}{src/odisea_marcharse_de_itaca.tex}{línea 7}{La forma oficial y ortográficamente completa del topónimo es \emph{Sant Feliu de Guíxols}.}{Los turistas embarcaban en las golondrinas que cubrían el trayecto entre Blanes y San Feliú de Guixols, deteniéndose un par de horas en Tossa de Mar.}{Los turistas embarcaban en las golondrinas que cubrían el trayecto entre Blanes y \camb{Sant Feliu de Guíxols}, deteniéndose un par de horas en Tossa de Mar.}
+
+\propuesta{Repetición léxica}{src/odisea_marcharse_de_itaca.tex}{línea 28}{\emph{Encontré} aparece tres veces en la evocación de la Ítaca industrial. Basta variar una aparición para descargar la serie sin romper su paralelismo.}{Pero quizás aquella Ítaca industrial de mi adolescencia no era sino el país de los feacios, donde encontré la hospitalidad que no conocía aún, donde conocí no a una, sino a muchas Nausícaas, donde, más adelante, encontré y luego abandoné a Penélope, rompiendo su corazón y el mío.}{Pero quizás aquella Ítaca industrial de mi adolescencia no era sino el país de los feacios, donde \camb{hallé} la hospitalidad que no conocía aún, donde conocí no a una, sino a muchas Nausícaas, donde, más adelante, encontré y luego abandoné a Penélope, rompiendo su corazón y el mío.}
+
+\propuesta{Redundancia adversativa}{src/odisea_marcharse_de_itaca.tex}{líneas 122--123}{\emph{Irónicamente} y \emph{sin embargo} cumplen aquí la misma función adversativa. La propuesta mantiene los dos versos, pero da contenido propio al primero.}{Irónicamente,\\
+sin embargo, ella te amaba,}{\camb{Contra todo pronóstico},\\
+ella te amaba,}
+
+\propuesta{Concordancia temporal}{src/odisea_marcharse_de_itaca.tex}{líneas 128--129}{La mirada y la visión están narradas en imperfecto; \emph{merece} introduce un presente que no parece deliberado.}{Veías un monstruo\\
+que no merece ser amado.}{Veías un monstruo\\
+que no \camb{merecía} ser amado.}
+
+\propuesta{Tiempo verbal}{src/odisea_marcharse_de_itaca.tex}{línea 143}{Con el adverbio \emph{ahora}, el perfecto compuesto o el presente resultan naturales; el perfecto simple sitúa el hecho en un pasado cerrado.}{Ahora llegó el momento\\
+para que intentes encontrar tu camino}{Ahora \camb{ha llegado} el momento\\
+para que intentes encontrar tu camino}
+
+\propuesta{Construcción incompleta}{src/odisea_marcharse_de_itaca.tex}{líneas 168--172}{\emph{Has llegado a pensar} necesita aquí la conjunción \emph{que} para introducir el contenido pensado.}{Tal vez todavía ella tenga la droga\\
+que una vez te dejó caminar por el Hades\\
+---quizás, has llegado a pensar,\\
+el Hades no es más que las profundidades\\
+de tu mente atormentada---.}{Tal vez todavía ella tenga la droga\\
+que una vez te dejó caminar por el Hades\\
+---quizás has llegado a pensar \camb{que}\\
+el Hades no es más que las profundidades\\
+de tu mente atormentada---.}
+
+\clearpage
+\section{Recapitulación}
+
+El informe contiene \textbf{\thecambio{} cambios propuestos}. Ninguno se ha aplicado al corpus. La mayor concentración de incidencias normativas aparece en la puntuación de «Lecciones de conducir»; se ha agrupado por bloques para que la regularización pueda aprobarse sin convertir cada coma en un cambio independiente.
+
+No se han marcado como problemas, entre otras recurrencias conscientes, la triple formulación de «El problema» en la introducción, las cadenas de \emph{quizás} que expresan conjetura cuando conservan un ritmo claro, el retorno de «No es de extrañar que el cine tema a Homero», los estribillos del capítulo XX, las fórmulas homéricas ni las repeticiones internas de las traducciones citadas. Tampoco se propone suprimir verso alguno.
+
+\end{document}
