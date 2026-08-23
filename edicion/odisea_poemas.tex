@@ -1,0 +1,74 @@
+\documentclass[12pt,a4paper]{article}
+
+\input{odisea_common}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+\definecolor{rojocambio}{RGB}{170,25,25}
+\newcommand{\quita}[1]{\textcolor{rojocambio}{\textit{[Suprimir: #1]}}}
+\newcounter{cambio}
+
+\newcommand{\propuesta}[5]{%
+  \refstepcounter{cambio}%
+  \subsection*{Cambio \thecambio: #1}
+  \noindent\textbf{Localización:} #2.\par
+  \noindent\textbf{Criterio:} #3\par
+  \medskip
+  \noindent\textbf{Original:}\par
+  #4\par
+  \medskip
+  \noindent\textbf{Sugerencia:}\par
+  #5\par
+  \medskip
+  \noindent$\square$ Aprobar\qquad$\square$ Rechazar\qquad$\square$ Revisar
+  \par\bigskip
+}
+
+\hypersetup{
+  pdftitle={Revisión de la integración de los poemas: Leer la Odisea en tiempos iletrados},
+  pdfauthor={}
+}
+
+\title{Revisión de la integración de los poemas\\[0.4em]\large\emph{Leer la Odisea en tiempos iletrados}}
+\author{}
+\date{Agosto de 2026}
+
+\begin{document}
+
+\maketitle
+
+\section*{Criterio}
+
+Esta revisión comprueba si la prosa establece la función de cada poema sin explicarlo antes o repetirlo después. No propone suprimir ni reescribir versos. Tampoco considera redundantes las transiciones breves que cambian de escena, identifican al hablante o permiten seguir el desarrollo de un fragmento largo.
+
+El resultado se limita a dos anticipaciones prescindibles. No se ha modificado el corpus.
+
+\propuesta
+  {No explicar dos veces la ausencia de introspección en Homero}
+  {src/odisea11\_sirenas.tex, líneas 175--177}
+  {La frase inmediatamente anterior ya afirma que Homero cuenta lo sucedido sin mostrar cómo se siente Odiseo ni en qué consiste la magia de las sirenas. El párrafo siguiente vuelve a formular la falta de introspección antes de que empiece el poema propio. Basta conservar la transición y anunciar la versión alternativa.}
+  {«Esa era otra de las cuentas que yo tenía pendientes con el granbardo. En \emph{Abandonando Ítaca}, escribo mi propia versión. Homero no da muchos detalles de cómo se sentían los protagonistas de su historia. Los muestra a menudo comiendo o bebiendo ---generalmente en exceso---, discutiendo, llorando, vociferando, o intentando salvar el pellejo. Pero rara vez sentimos sus emociones, rara vez llegamos a ponernos en su piel. Y sin embargo, son hombres como nosotros».}
+  {Esa era otra de las cuentas que yo tenía pendientes con el granbardo. En \emph{Abandonando Ítaca}, escribo mi propia versión\quita{. Homero no da muchos detalles de cómo se sentían los protagonistas de su historia. Los muestra a menudo comiendo o bebiendo ---generalmente en exceso---, discutiendo, llorando, vociferando, o intentando salvar el pellejo. Pero rara vez sentimos sus emociones, rara vez llegamos a ponernos en su piel. Y sin embargo, son hombres como nosotros}:}
+
+\propuesta
+  {Dejar que el poema amplíe el lamento de Circe}
+  {src/odisea8\_circe.tex, línea 440}
+  {El fragmento anterior muestra a Circe llorando por Elpénor. El siguiente ensancha el lamento hasta abarcar a todos los muertos de la guerra y del viaje. La prosa anuncia ya ese movimiento completo; si se limita a introducir la primera muerte, la ampliación queda en manos del poema.}
+  {«Circe, en el recuerdo del viejo Ulises, deja de ser una diosa altiva, distante y no poco malvada, para convertirse en una mujer capaz de llorar por una muerte absurda, por todas las muertes absurdas que abundan en la \emph{Odisea}».}
+  {Circe, en el recuerdo del viejo Ulises, deja de ser una diosa altiva, distante y no poco malvada, para convertirse en una mujer capaz de llorar por una muerte absurda\quita{, por todas las muertes absurdas que abundan en la \emph{Odisea}}:}
+
+\section*{Elementos revisados y conservados}
+
+No propongo intervenir en los siguientes casos:
+
+\begin{itemize}[leftmargin=*]
+  \item Los fragmentos de Nausícaa, Polifemo, Agamenón, los pretendientes y Penélope: la prosa sitúa el recuerdo o la culpa concreta y los versos desarrollan una lectura nueva.
+  \item «La Gran Guerra»: no es una ilustración intercalada, sino un capítulo construido desde la conciencia del anciano Odiseo; las intervenciones en prosa orientan el avance entre sus distintas escenas.
+  \item «El asesinato de las niñas»: el recorrido por Patroclo, Pentesilea, Héctor y Aquiles se aparta deliberadamente de la línea de la \emph{Odisea}, pero prepara el contraste moral entre Aquiles y Odiseo que cierra el capítulo.
+  \item «Lecciones de conducir»: el poema autobiográfico permite explicar de manera concreta por qué el reencuentro entre Laertes y Odiseo deja frío al narrador; no funciona como adorno.
+  \item «Marcharse de Ítaca»: los versos constituyen la resolución narrativa del libro. Las frases breves entre fragmentos marcan etapas distintas ---muerte, amor, regreso a Circe, liberación de los fantasmas y partida--- y forman una estructura deliberada.
+  \item La presentación de la ampliación de \emph{Abandonando Ítaca} en «Menelao»: distingue el texto publicado del fragmento nuevo y proporciona al lector la situación narrativa antes de un pasaje extenso.
+\end{itemize}
+
+\end{document}

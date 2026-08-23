@@ -1,0 +1,115 @@
+\documentclass[12pt,a4paper]{article}
+
+\input{odisea_common}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+\definecolor{rojocambio}{RGB}{170,25,25}
+\newcommand{\camb}[1]{\textcolor{rojocambio}{\textit{#1}}}
+\newcommand{\quita}[1]{\textcolor{rojocambio}{\textit{[Suprimir: #1]}}}
+\newcounter{cambio}
+
+\newcommand{\propuesta}[6]{%
+  \refstepcounter{cambio}%
+  \subsection*{Cambio \thecambio: #1}
+  \noindent\textbf{Localización:} #2.\par
+  \noindent\textbf{Criterio:} #3\par
+  \medskip
+  \noindent\textbf{Pasaje anterior:}\par
+  #4\par
+  \medskip
+  \noindent\textbf{Pasaje redundante:}\par
+  #5\par
+  \medskip
+  \noindent\textbf{Sugerencia:}\par
+  #6\par
+  \medskip
+  \noindent$\square$ Aprobar\qquad$\square$ Rechazar\qquad$\square$ Revisar
+  \par\bigskip
+}
+
+\hypersetup{
+  pdftitle={Revisión de repeticiones: Leer la Odisea en tiempos iletrados},
+  pdfauthor={}
+}
+
+\title{Revisión de repeticiones\\[0.4em]\large\emph{Leer la Odisea en tiempos iletrados}}
+\author{}
+\date{Agosto de 2026}
+
+\begin{document}
+
+\maketitle
+
+\section*{Criterio}
+
+Esta revisión compara los veinte capítulos como una obra continua. No considera defectos las recurrencias que funcionan como tesis, preparación y cumplimiento, recapitulación necesaria, anáfora o estribillo. Tampoco propone eliminar recordatorios separados por suficiente distancia cuando permiten recuperar el argumento.
+
+El resultado es deliberadamente corto: cinco redundancias claras en unas 70.000 palabras. No se ha modificado el corpus. En las sugerencias, las adiciones o sustituciones aparecen en cursiva roja y las supresiones se indican también en cursiva roja.
+
+\propuesta
+  {Formación lectora contada dos veces}
+  {src/odisea0\_intro.tex, línea 19; src/odisea1\_nolan.tex, línea 5}
+  {La introducción enumera las compras dominicales del padre, el \emph{Capitán Trueno} y la colección «Historias Selección». El capítulo siguiente vuelve a contar lo mismo con más detalle y explica además su función en la infancia del autor. Conviene conservar el desarrollo completo en el segundo capítulo y aligerar la anticipación.}
+  {En la introducción: «Cada domingo, mi padre me compraba un tebeo (las aventuras del Capitán Trueno) y un libro de la colección “Historias Selección”, donde descubrí a Robinson Crusoe, a Ben-Hur, a Tom Sawyer, a Nemo, a Uncas y a John Silver, entre otros muchos».}
+  {En el capítulo siguiente: «Mi padre resolvió la situación cuando empezó a comprarme todos los domingos un tebeo (las aventuras del \emph{Capitán Trueno}) y un libro de la maravillosa colección “Historias Selección”».}
+  {Sin darme cuenta, en casa de mi tía Corro, estaba leyendo mi primera gran épica. No fue la única. \quita{Cada domingo, mi padre me compraba un tebeo (las aventuras del Capitán Trueno) y un libro de la colección «Historias Selección», donde descubrí a Robinson Crusoe, a Ben-Hur, a Tom Sawyer, a Nemo, a Uncas y a John Silver, entre otros muchos.} A los quince años, cuando mi padre me regaló la \emph{Ilíada} y la \emph{Odisea} ---de esa historia hablaré en el próximo capítulo---, yo era ya una máquina de leer. A los veintidós, un libro de trescientas páginas caía en una semana, dos a lo sumo. Los tres volúmenes de \emph{El señor de los anillos} no fueron ninguna excepción.}
+
+
+si
+
+\propuesta
+  {Nueva presentación bibliográfica de \emph{Abandonando Ítaca}}
+  {src/odisea0\_intro.tex, línea 87; src/odisea3\_menelao\_es.tex, línea 5}
+  {La introducción ya presenta el libro, el año y la premisa. El capítulo de Menelao necesita anunciar que ofrece una ampliación, pero no volver a presentar la obra ni repetir la referencia editorial y el enlace.}
+  {«En 2025, publiqué mi propia lectura de la \emph{Odisea}, imaginando a un Ulises octogenario que repasa su vida en una Ítaca que ya no siente como suya».}
+  {«Como apuntaba en el capítulo I, publiqué \emph{Abandonando Ítaca} (Eolas, 2025\footnote{\url{https://eolasediciones.es/libro/abandonando-itaca-leaving-ithaca/}}), un poema que ofrece mi propia lectura del mito».}
+  {Permíteme, paciente lectora, generoso lector, que ilustre lo que quiero decir ---con toda desvergüenza--- usando \camb{un fragmento nuevo de} \emph{Abandonando Ítaca}.}
+
+
+SI
+\propuesta
+  {Recapitulación inmediata de Nausícaa y los feacios}
+  {src/odisea6\_esqueria.tex, líneas 49--53; src/odisea7\_ciclope.tex, línea 3}
+  {El capítulo de Esqueria acaba de desarrollar por qué eliminar a Nausícaa y a los feacios perjudica la tesis de Nolan. Tras un solo capítulo interpuesto, «Cíclope» repite el veredicto sin añadir un argumento. La primera oración del párrafo sí aporta un balance nuevo sobre Helena y Menelao.}
+  {«Quizás por eso suprime de la película uno de los capítulos más importantes de la \emph{Odisea}, ya que Nausícaa y los feacios suponen un contraejemplo a su pesimismo. [...] No solo elimina uno de los personajes más adorables [...] sino que borra las pruebas que no le convienen a su narrativa».}
+  {«Eliminar a Nausícaa es un pecado capital y quitar de en medio a los feacios una blasfemia digna de excomunión, pero, ¡ay!, así son las exigencias del guion».}
+  {Hasta el momento, sir Christopher y el que suscribe no han llegado a las manos. Darle un tajo a Helena en el rostro es simplista, pero la escena de Esparta fluye, Lupita Nyong'o está divina y Jon Bernthal interpreta a un convincente Menelao. \quita{Eliminar a Nausícaa es un pecado capital y quitar de en medio a los feacios una blasfemia digna de excomunión, pero, ¡ay!, así son las exigencias del guion.}}
+  
+NO
+
+\propuesta
+  {La treta del caballo vuelve a presentarse como ejemplo fallido de \emph{xenía}}
+  {src/odisea6\_esqueria.tex, línea 53; src/odisea7\_ciclope.tex, línea 284}
+  {Esqueria ya explica por extenso que la treta del caballo ocurre entre enemigos en guerra y no constituye una violación clara de la hospitalidad. El nuevo párrafo vuelve a anunciar ese razonamiento. El párrafo siguiente sí avanza: ordena los ejemplos de hospitalidad y presenta a Polifemo como infractor consciente.}
+  {«La treta del caballo no involucra una petición de hospitalidad sino un abuso del sentimiento religioso [...]. Pero el caso es que nuestro fílmico caballero se aferra a ella como a un clavo ardiendo».}
+  {«El amigo Christopher se pasa toda su película obsesionado con el desastre que supone violar la \emph{xenía}, pero el único caso sustancial que nos da ---la treta del caballo--- resulta, como hemos visto, bastante endeble».}
+  {\quita{Veamos. El amigo Christopher se pasa toda su película obsesionado con el desastre que supone violar la \emph{xenía}, pero el único caso sustancial que nos da ---la treta del caballo--- resulta, como hemos visto, bastante endeble. Si examinamos con cierta atención sus argumentos, veremos que apenas se sostienen.} El texto continuaría con «De hecho, si leemos atentamente la \emph{Odisea}...».}
+
+
+NO
+
+\propuesta
+  {Nueva defensa del derecho a reinterpretar el clásico}
+  {src/odisea3\_menelao\_es.tex, líneas 3 y 285; src/odisea7\_ciclope.tex, línea 561}
+  {El capítulo de Menelao establece al principio y al final que la objeción no es reinventar a Homero, sino no estar a la altura de sus personajes. En «Cíclope», la frase «me viene bien para insistir» anuncia una reiteración. El argumento específico sobre Polifemo se entiende mejor si empieza directamente por la falta de ambición de Nolan.}
+  {«Mi queja no es que Nolan reinterprete a Helena, sino que sale del paso con un cliché»; y, al cerrar el capítulo, «Nadie pide fidelidad a Homero, pero sí estar a la altura de sus personajes».}
+  {«Lo que me viene bien para insistir en que no me molesta en absoluto que se reinterprete o incluso se reinvente el clásico».}
+  {El Polifemo del amigo Christopher tiene un eco de este muchacho retrasado que describe el poema\footnote{Y por si algún malpensado se lo está preguntando, \emph{Abandonando Ítaca} se publicó un año antes de que se estrenara la película de Nolan.}\camb{.} \quita{Lo que me viene bien para insistir en que no me molesta en absoluto que se reinterprete o incluso se reinvente el clásico.} El problema no es un cíclope estúpido, sino la falta de ambición para sacarle partido.}
+
+si
+\section*{Recurrencias revisadas y conservadas}
+
+No propongo intervenir en los siguientes casos:
+
+\begin{itemize}[leftmargin=*]
+  \item «El cine teme a Homero»: formula la tesis, la desarrolla y vuelve como cierre deliberado en «El asesinato de las niñas».
+  \item La cicatriz de Helena: funciona primero como anticipación y después como demostración apoyada en el canto IV.
+  \item Los dioses y la responsabilidad: Calipso plantea el problema general, Hades introduce el libre albedrío y la matanza de los pretendientes propone una lectura metafórica. No son el mismo argumento.
+  \item Las entradas a los poemas de \emph{Abandonando Ítaca}: salvo la presentación bibliográfica señalada en el cambio 2, indican qué episodio se reescribe y por qué aparece allí el fragmento.
+  \item El enlace entre la matanza de los pretendientes y el asesinato de las niñas: la recapitulación abre un capítulo nuevo y recupera el episodio exacto desde el que continúa la lectura.
+  \item Los recordatorios sobre la falta de introspección en Homero: están suficientemente separados y justifican fragmentos distintos del poema propio.
+\end{itemize}
+
+\end{document}

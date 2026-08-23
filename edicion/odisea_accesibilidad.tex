@@ -1,0 +1,73 @@
+\documentclass[12pt,a4paper]{article}
+
+\input{odisea_common}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+\definecolor{rojocambio}{RGB}{170,25,25}
+\newcommand{\camb}[1]{\textcolor{rojocambio}{\textit{#1}}}
+\newcounter{cambio}
+
+\newcommand{\propuesta}[5]{%
+  \refstepcounter{cambio}%
+  \subsection*{Cambio \thecambio: #1}
+  \noindent\textbf{Localización:} #2.\par
+  \noindent\textbf{Criterio:} #3\par
+  \medskip
+  \noindent\textbf{Original:}\par
+  #4\par
+  \medskip
+  \noindent\textbf{Sugerencia:}\par
+  #5\par
+  \medskip
+  \noindent$\square$ Aprobar\qquad$\square$ Rechazar\qquad$\square$ Revisar
+  \par\bigskip
+}
+
+\hypersetup{
+  pdftitle={Revisión de accesibilidad: Leer la Odisea en tiempos iletrados},
+  pdfauthor={}
+}
+
+\title{Revisión de accesibilidad\\[0.4em]\large\emph{Leer la Odisea en tiempos iletrados}}
+\author{}
+\date{Agosto de 2026}
+
+\begin{document}
+
+\maketitle
+
+\section*{Criterio}
+
+Esta revisión busca obstáculos concretos para un lector culto no académico. No propone explicar nombres o alusiones que se entienden por el contexto, ni añadir notas para demostrar erudición. Tampoco considera un problema que algún chiste o referencia secundaria no sea universal. El resultado se limita a dos términos cuyo significado interviene directamente en el argumento y que aparecen antes de recibir explicación.
+
+No se ha modificado el corpus. Las adiciones propuestas aparecen en cursiva roja.
+
+\propuesta
+  {Definir \emph{xenía} en su primera aparición}
+  {src/odisea1\_nolan.tex, línea 127}
+  {El capítulo presenta la \emph{xenía} como «la ley de Zeus», pero no dice todavía en qué consiste. La explicación completa llega cinco capítulos después. Basta una glosa breve para que se entienda desde aquí por qué Polifemo y los feacios son los dos contraejemplos decisivos.}
+  {«También quiere filosofar y ponerse profundo, reflexionando, a lo largo de todo el film, sobre el fin de la ley de Zeus ---la \gr{ξενία} (\emph{xenía})---, pero se salta dos ejemplos cruciales que Homero nos ofrece vívidamente».}
+  {También quiere filosofar y ponerse profundo, reflexionando, a lo largo de todo el film, sobre el fin de la ley de Zeus ---la \gr{ξενία} (\emph{xenía}), \camb{la obligación sagrada de dar hospitalidad al forastero}---, pero se salta dos ejemplos cruciales que Homero nos ofrece vívidamente.}
+
+\propuesta
+  {Aclarar \emph{nóstos} sin alterar el verso}
+  {src/odisea3\_menelao\_es.tex, línea 13}
+  {\emph{Nóstos} aparece una sola vez en el libro y no se traduce. El contexto permite suponer que designa alguna consecuencia de Troya, pero no que significa específicamente el regreso a la patria. Una nota mínima conserva intacto el poema.}
+  {«los que sobrevivieron a Troya y al \emph{nóstos}».}
+  {los que sobrevivieron a Troya y al \emph{nóstos}\footnote{\camb{El regreso a la patria después de la guerra.}}.}
+
+\section*{Elementos revisados y conservados}
+
+No propongo intervenir en los siguientes casos:
+
+\begin{itemize}[leftmargin=*]
+  \item Los hexámetros dactílicos aparecen en el capítulo I sin definición técnica, pero el párrafo deja claro que son la métrica de Homero y Virgilio; el capítulo II explica después su funcionamiento porque allí sí importa para el argumento.
+  \item Los patronímicos y nombres colectivos ---Atrida, Pelida, Crónida, argivos, dánaos--- aparecen sobre todo en los versos citados y su referente se deduce sin dificultad de la escena.
+  \item \emph{Eídolon}, \emph{deus ex machina}, \emph{polýtropos}, \emph{megalḗtoros}, \emph{kynôpis} y otros términos griegos o técnicos reciben traducción o explicación cuando el análisis depende de ellos.
+  \item Las entradas a los fragmentos extensos indican quién habla, en qué momento del relato y por qué se cita el pasaje. No he encontrado una cita cuyo papel en el argumento requiera una transición añadida.
+  \item Referencias como \emph{Nodisea}, «Chris Nodoyuna», el Tártaro, el prado de los asfódelos o los bertsolaris pueden no ser familiares para todos los lectores, pero el contexto permite seguir el argumento sin explicarlas. Glosarlas apagaría el humor o añadiría aparato innecesario.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,80 @@
+\documentclass[12pt,a4paper]{article}
+
+\input{odisea_common}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+\definecolor{rojocambio}{RGB}{170,25,25}
+\newcommand{\quita}[1]{\textcolor{rojocambio}{\textit{[Suprimir: #1]}}}
+\newcounter{cambio}
+
+\newcommand{\propuesta}[5]{%
+  \refstepcounter{cambio}%
+  \subsection*{Cambio \thecambio: #1}
+  \noindent\textbf{Localización:} #2.\par
+  \noindent\textbf{Criterio:} #3\par
+  \medskip
+  \noindent\textbf{Original:}\par
+  #4\par
+  \medskip
+  \noindent\textbf{Sugerencia:}\par
+  #5\par
+  \medskip
+  \noindent$\square$ Aprobar\qquad$\square$ Rechazar\qquad$\square$ Revisar
+  \par\bigskip
+}
+
+\hypersetup{
+  pdftitle={Revisión de la presencia de Nolan: Leer la Odisea en tiempos iletrados},
+  pdfauthor={}
+}
+
+\title{Revisión de la presencia de Nolan\\[0.4em]\large\emph{Leer la Odisea en tiempos iletrados}}
+\author{}
+\date{Agosto de 2026}
+
+\begin{document}
+
+\maketitle
+
+\section*{Criterio}
+
+Esta revisión no cuenta menciones ni considera excesiva por sí misma la presencia de Nolan. La película da origen al libro y el contraste con Homero organiza buena parte del argumento. Se conservan las referencias que identifican una omisión, comparan una escena concreta, reconocen un acierto o ayudan a caracterizar al Odiseo cinematográfico.
+
+Solo se señalan tres incisos que reiteran un juicio ya establecido sin añadir información sobre Homero ni sobre la película. No se ha modificado el corpus.
+
+\propuesta
+  {Evitar un veredicto general entre dos momentos del arco}
+  {src/odisea12\_pretendientes.tex, línea 215}
+  {El párrafo reconoce que Nolan reproduce bien los preparativos y el siguiente examina el sonido del arco, un detalle concreto que la película aprovecha. La coletilla final vuelve al veredicto general de que el director conoce el texto pero lo simplifica, ya desarrollado en el capítulo.}
+  {«Es otra escena muy bien conseguida en la película, lo que demuestra que, si Nolan se queda corto, no es por falta de atención ---ni devoción---, sino por papanatismo».}
+  {Es otra escena muy bien conseguida en la película. \quita{Lo que demuestra que, si Nolan se queda corto, no es por falta de atención ---ni devoción---, sino por papanatismo.}}
+
+\propuesta
+  {No comparar dos veces seguidas la muerte de Antínoo}
+  {src/odisea12\_pretendientes.tex, líneas 266 y 278}
+  {La entrada al episodio ya contrapone la sobriedad de Homero con el melodrama de la película. Doce líneas después, antes de continuar la cita, «la manida escena alternativa» repite el mismo juicio sin precisar ninguna diferencia nueva.}
+  {«Odiseo lo despacha mientras da un trago de vino, sin darle tiempo a rechistar. Como es marca de la casa, la descripción de su muerte es exacta y terrible, mucho más, en mi opinión, que la manida escena alternativa que nos da Nolan».}
+  {Odiseo lo despacha mientras da un trago de vino, sin darle tiempo a rechistar. Como es marca de la casa, la descripción de su muerte es exacta y terrible\quita{, mucho más, en mi opinión, que la manida escena alternativa que nos da Nolan}:}
+
+\propuesta
+  {No recapitular la batalla en el capítulo siguiente}
+  {src/odisea13\_ninas.tex, línea 220}
+  {El capítulo anterior acaba de explicar por extenso el Odiseo «saltarín» y el Telémaco pasmado de la película. Aquí el argumento nuevo es que Hollywood puede representar la batalla, pero no la ejecución posterior de las esclavas. El inciso devuelve momentáneamente al lector a una crítica ya cerrada.}
+  {«La parte de la batalla no es el problema ---a pesar de lo cual Nolan no anda muy acertado con su Odiseo saltarín y su Telémaco pasmado---. El problema es mostrar al implacable asesino cortándole la cabeza a un suplicante».}
+  {La parte de la batalla no es el problema\quita{ ---a pesar de lo cual Nolan no anda muy acertado con su Odiseo saltarín y su Telémaco pasmado---}. El problema es mostrar al implacable asesino cortándole la cabeza a un suplicante.}
+
+\section*{Elementos revisados y conservados}
+
+No propongo intervenir en los siguientes casos:
+
+\begin{itemize}[leftmargin=*]
+  \item La presencia extensa de Nolan en «Helena», «Cíclope» y «Pretendientes»: en esos capítulos el contraste cinematográfico estructura la lectura y las menciones corresponden a decisiones distintas.
+  \item Los elogios a las escenas del bardo, Calipso, los lestrigones, el Hades y las sirenas: equilibran la crítica y explican qué entiende el libro por una reinterpretación lograda.
+  \item Las omisiones concretas ---Nausícaa, la treta de Nadie, Aquiles o las esclavas---: no son una lista de agravios intercambiables; cada una elimina un rasgo diferente del poema y sostiene un argumento local.
+  \item El concilio burlesco al comienzo de «Sirenas»: cumple una función narrativa propia y prepara la absolución parcial de Nolan antes del análisis del episodio.
+  \item La comparación con el final cinematográfico en «Homero»: contrapone dos desenlaces concretos y sirve de última aparición del director antes de que el libro pase a la cuestión homérica y al epílogo.
+\end{itemize}
+
+\end{document}
