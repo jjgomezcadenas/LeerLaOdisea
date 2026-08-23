@@ -14,3 +14,12 @@
 \setlength{\parindent}{1.25em}
 \setlength{\parskip}{0.35em}
 \raggedbottom
+
+% Citas en verso (Tobal y demás traducciones y poetas citados): cuerpo menor, sangría aumentada
+\newenvironment{versocita}
+  {\small\begin{verse}\addtolength{\leftskip}{1.5em}}
+  {\end{verse}}
+% Poemas y versos del autor: cursiva a cuerpo entero
+\newenvironment{versopropio}
+  {\begin{verse}\itshape}
+  {\end{verse}}
