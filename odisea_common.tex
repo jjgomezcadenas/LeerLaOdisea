@@ -23,3 +23,8 @@
 \newenvironment{versopropio}
   {\begin{verse}\itshape}
   {\end{verse}}
+
+% Citas en prosa (quote) también en cuerpo menor
+\usepackage{etoolbox}
+\AtBeginEnvironment{quote}{\small}
+\AtBeginEnvironment{quotation}{\small}
